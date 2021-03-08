@@ -1,0 +1,22 @@
+
+@import '~@angular/material/theming';
+$Servant-primary: mat-palette($mat-blue-grey, A200, A100, A400);
+$Servant-accent: mat-palette($mat-green, A200, A100, A400);
+$Servant-warn: mat-palette($mat-red);
+// $Servant-foreground: mat-palette($mat-yellow);
+// $Servant-background: mat-palette($mat-lime);
+
+$Servant-theme: mat-light-theme((
+  color: (
+    primary: $Servant-primary,
+    accent: $Servant-accent,
+    warn: $Servant-warn,
+    // foreground: $Servant-foreground,
+  )
+));
+
+@include angular-material-theme($Servant-theme);
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

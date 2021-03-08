@@ -1,0 +1,4 @@
+@import '~@angular/material/theming';
+.purple-bg-600 {
+    background: mat-color($mat-purple, 600);
+  }
