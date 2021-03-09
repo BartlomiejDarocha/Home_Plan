@@ -28,6 +28,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "src/customMaterial.scss"
+              },
               "src/styles.scss"
             ],
             "scripts": []
@@ -90,10 +93,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [ 
-              {
-                "input": "src/customMaterial.scss"
-              },
+            "styles": [
               "src/styles.scss"
             ],
             "scripts": []
