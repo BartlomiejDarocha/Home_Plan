@@ -3,9 +3,9 @@
 .textColorBox {
     height: 500px;
     width: 400px;
-    color: red;
-    background-color: green;
+    color: $text-one;
+    background-color: $base;
     div:nth-child(2) {
-        color: gold;
+        color: $text-two;
     }
 }
