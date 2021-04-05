@@ -1,6 +1,9 @@
-@import "/src/assets/colors/colors.scss";
+$base: rgb(55, 92, 126);
+$active: rgb(18, 138, 18);
+$text-one: #c4c4c4;
+$tex-two: #baa609;
 
-.textColorBox {
+.test {
     height: 500px;
     width: 400px;
     color: red;
