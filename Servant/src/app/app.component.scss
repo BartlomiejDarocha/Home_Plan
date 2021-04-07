@@ -9,6 +9,16 @@
         color: $text-two;
     }
 }
+.testMutliClass {
+    padding: 10px;
+    &-green {
+        color: green;
+    }
+    &-red {
+        color: red;
+    }
+}
+
 .ic-standard {
     width: 50px;
     height: 50px;
