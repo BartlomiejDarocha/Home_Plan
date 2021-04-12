@@ -15,6 +15,6 @@ export class LoaderGlobalComponent {
     value: 50
   }
 
-  constructor(public loaderService: LoaderService) { }
+  constructor(private loaderService: LoaderService) { }
 
 }
