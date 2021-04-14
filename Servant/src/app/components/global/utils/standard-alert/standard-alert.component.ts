@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA}  from '@angular/material/dialog';
 import { StandardAlertInterFace } from './interFaces';
 
@@ -8,11 +8,6 @@ import { StandardAlertInterFace } from './interFaces';
   templateUrl: './standard-alert.component.html',
   styleUrls: ['./standard-alert.component.scss']
 })
-export class StandardAlertComponent implements OnInit {
-
+export class StandardAlertComponent  {
   constructor(@Inject(MAT_DIALOG_DATA) public data: StandardAlertInterFace) { }
-
-  ngOnInit(): void {
-  }
-
 }
