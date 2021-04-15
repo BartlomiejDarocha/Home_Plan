@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { GlobalComponentModuleModule } from './components/global/global-component-module.module';
+import { UtilsService } from './services/global-services/utils/utils.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { GlobalComponentModuleModule } from './components/global/global-componen
     MatButtonModule,
     GlobalComponentModuleModule
   ],
-  providers: [],
+  providers: [UtilsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

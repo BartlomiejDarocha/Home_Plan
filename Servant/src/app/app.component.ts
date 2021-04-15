@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoaderService } from './services/global-services/loader-service/loader.service';
+import { UtilsService } from './services/global-services/utils/utils.service';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,20 @@ import { LoaderService } from './services/global-services/loader-service/loader.
 export class AppComponent {
   title = 'Servant';
 
-  constructor(private loaderService: LoaderService) {}
+  constructor(private loaderService: LoaderService, private utils: UtilsService) {}
 
   public testLoader(): void {
     this.loaderService.showLoader();
     setTimeout(() => {
       this.loaderService.hideLoader();
     }, 2000);
+  }
+
+  public testDialog() {
+    this.utils.openSimpleDialog({
+      header: 'Test Header',
+      content: 'Test Content'
+    })
+
   }
 }
