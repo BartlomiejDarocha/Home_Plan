@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { GlobalComponentModuleModule } from './components/global/global-component-module.module';
 import { UtilsService } from './services/global-services/utils/utils.service';
+import { AngularMaterialModule } from './angular-material.module';
+
 
 @NgModule({
   declarations: [
@@ -16,10 +18,12 @@ import { UtilsService } from './services/global-services/utils/utils.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    GlobalComponentModuleModule
+    GlobalComponentModuleModule,
+    AngularMaterialModule
   ],
-  providers: [UtilsService],
+  providers: [
+    UtilsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
