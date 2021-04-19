@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { StandardAlertInterFace } from 'src/app/components/global/utils/standard-alert/interFaces';
+import { StandardAlertInterFace } from 'src/app/components/global/utils/interFaces';
 import { StandardAlertComponent } from 'src/app/components/global/utils/standard-alert/standard-alert.component';
 
 @Injectable({
