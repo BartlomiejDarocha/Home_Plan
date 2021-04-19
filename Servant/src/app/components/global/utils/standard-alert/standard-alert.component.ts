@@ -9,11 +9,5 @@ import { StandardAlertInterFace } from '../interFaces';
   styleUrls: ['./standard-alert.component.scss']
 })
 export class StandardAlertComponent  {
-  public standardData: StandardAlertInterFace = {
-    header: '',
-    content: ''
-  }
-  constructor(@Inject(MAT_DIALOG_DATA) private data: StandardAlertInterFace) {
-    this.standardData = { ...data };
-  }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: StandardAlertInterFace) {}
 }

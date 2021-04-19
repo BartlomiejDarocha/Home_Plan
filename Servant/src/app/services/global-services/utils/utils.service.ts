@@ -18,6 +18,12 @@ export class UtilsService {
   }
 
   public openConfirmAlert(confirmData: ConfirmAlertInterFace): void {
+    let defaultConfirmData: ConfirmAlertInterFace = {
+      header: '',
+      content: '',
+      confirmButton: 'Ok',
+      cancelButton: 'Anuluj'
+    }
     this.dialog.open(ConfirmAlertComponent, {
       data: confirmData
     });

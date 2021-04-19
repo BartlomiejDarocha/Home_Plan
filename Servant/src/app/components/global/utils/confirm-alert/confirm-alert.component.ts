@@ -8,15 +8,6 @@ import { ConfirmAlertInterFace } from '../interFaces';
   styleUrls: ['./confirm-alert.component.scss']
 })
 export class ConfirmAlertComponent {
-  public confirmData: ConfirmAlertInterFace = {
-    header: '',
-    content: '',
-    confirmButton: 'Ok',
-    cancelButton: 'Anuluj'
-  }
-
-  constructor(@Inject(MAT_DIALOG_DATA) public data: ConfirmAlertInterFace) {
-    this.confirmData = { ...data };
-  }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: ConfirmAlertInterFace) {}
 
 }

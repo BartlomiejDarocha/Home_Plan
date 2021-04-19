@@ -24,6 +24,12 @@ export class AppComponent {
       header: 'Test Header',
       content: 'Test Content'
     })
+  }
 
+  public testConfirmDialog() {
+    this.utils.openStandardAlert({
+      header: 'Test ConfirmHeader',
+      content: 'Test ConfirmContent'
+    })
   }
 }
