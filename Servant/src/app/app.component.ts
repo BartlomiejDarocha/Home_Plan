@@ -19,17 +19,15 @@ export class AppComponent {
     }, 2000);
   }
 
-  public testDialog() {
-    this.utils.openStandardAlert({
-      header: 'Test Header',
-      content: 'Test Content'
-    })
+  public testDialog(): void {
+    this.utils.openStandardAlert('Test Header','Test Content')
   }
 
-  public testConfirmDialog() {
-    this.utils.openStandardAlert({
-      header: 'Test ConfirmHeader',
-      content: 'Test ConfirmContent'
-    })
+  public testConfirmDialogDefButtons(): void {
+    this.utils.openConfirmAlert('Test ConfirmHeader', 'Test ConfirmContent');
+  }
+
+  public testConfirmDialogSetButtons(): void {
+    this.utils.openConfirmAlert('Test ConfirmHeader', 'Test ConfirmContent', 'OKButton', 'CancelButton');
   }
 }

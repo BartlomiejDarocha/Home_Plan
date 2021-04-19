@@ -11,18 +11,28 @@ export class UtilsService {
 
   constructor(public dialog: MatDialog) { }
 
-  public openStandardAlert(message: StandardAlertInterFace): void {
+  public openStandardAlert(header: string, content: string): void {
+    const message = { header, content}
     this.dialog.open(StandardAlertComponent, {
       data: message
     });
   }
 
-  public openConfirmAlert(confirmData: ConfirmAlertInterFace): void {
-    let defaultConfirmData: ConfirmAlertInterFace = {
+  public openConfirmAlert(header: string, content: string, confirmButton?: string | null, cancelButton?: string | null): void {
+    let confirmData: ConfirmAlertInterFace = {
       header: '',
       content: '',
       confirmButton: 'Ok',
       cancelButton: 'Anuluj'
+    }
+    confirmData.header = header;
+    confirmData.content = content;
+    if (confirmButton) {
+      confirmData.confirmButton = confirmButton;
+    }
+    if (cancelButton) {
+      confirmData.cancelButton = cancelButton;
+
     }
     this.dialog.open(ConfirmAlertComponent, {
       data: confirmData
