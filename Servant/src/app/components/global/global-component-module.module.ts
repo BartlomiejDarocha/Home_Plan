@@ -11,14 +11,14 @@ import { ConfirmAlertComponent } from './utils/confirm-alert/confirm-alert.compo
     LoaderGlobalComponent,
     StandardAlertComponent,
     ConfirmAlertComponent,
-    
   ],
   imports: [
     CommonModule,
   ],
   exports: [
     LoaderGlobalComponent,
-    StandardAlertComponent
+    StandardAlertComponent,
+    ConfirmAlertComponent
   ]
 })
 export class GlobalComponentModuleModule { }

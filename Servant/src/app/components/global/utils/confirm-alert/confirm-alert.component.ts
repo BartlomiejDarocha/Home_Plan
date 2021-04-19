@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ConfirmAlertInterFace } from '../interFaces';
 
 @Component({
@@ -14,6 +15,8 @@ export class ConfirmAlertComponent {
     cancelButton: 'Anuluj'
   }
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: ConfirmAlertInterFace) {
+    this.confirmData = { ...data };
+  }
 
 }

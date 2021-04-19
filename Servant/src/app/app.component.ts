@@ -20,7 +20,7 @@ export class AppComponent {
   }
 
   public testDialog() {
-    this.utils.openSimpleDialog({
+    this.utils.openStandardAlert({
       header: 'Test Header',
       content: 'Test Content'
     })
