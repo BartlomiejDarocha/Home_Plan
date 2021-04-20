@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { LoaderGlobalComponent } from './loader-global/loader-global.component';
 import { StandardAlertComponent } from './utils/standard-alert/standard-alert.component';
 import { ConfirmAlertComponent } from './utils/confirm-alert/confirm-alert.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+
 
 
 
@@ -14,6 +17,8 @@ import { ConfirmAlertComponent } from './utils/confirm-alert/confirm-alert.compo
   ],
   imports: [
     CommonModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   exports: [
     LoaderGlobalComponent,
