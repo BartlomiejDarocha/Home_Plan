@@ -13,7 +13,7 @@ export class UtilsService {
 
   public openStandardAlert(header: string, content: string): void {
     const message = { header, content}
-    this.dialog.open(StandardAlertComponent, {
+    const dialog = this.dialog.open(StandardAlertComponent, {
       data: message
     });
   }
@@ -34,8 +34,13 @@ export class UtilsService {
       confirmData.cancelButton = cancelButton;
 
     }
-    this.dialog.open(ConfirmAlertComponent, {
+
+    const dialog = this.dialog.open(ConfirmAlertComponent, {
       data: confirmData
     });
+    dialog.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+
   }
 }
