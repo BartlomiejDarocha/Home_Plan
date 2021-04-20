@@ -5,7 +5,7 @@
   <p [innerText]="data.header"></p>
   <p [innerText]="data.content"></p>
   <div>
-    <button color="accent" mat-raised-button mat-dialog-close="true" [innerText]="data.confirmButton"></button>
-    <button color="accent" mat-raised-button mat-dialog-close="false" [innerText]="data.cancelButton"></button>
+    <button color="accent" mat-raised-button [mat-dialog-close]="true" [innerText]="data.confirmButton"></button>
+    <button color="accent" mat-raised-button [mat-dialog-close]="false" [innerText]="data.cancelButton"></button>
   </div>
 </div>

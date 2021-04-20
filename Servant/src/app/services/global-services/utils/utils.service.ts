@@ -18,7 +18,7 @@ export class UtilsService {
     });
   }
 
-  public async openConfirmAlert(header: string, content: string, confirmButton?: string | null, cancelButton?: string | null): Promise<void> {
+  public async openConfirmAlert(header: string, content: string, confirmButton?: string | null, cancelButton?: string | null): Promise<Boolean> {
     let confirmData: ConfirmAlertInterFace = {
       header: '',
       content: '',
@@ -34,20 +34,9 @@ export class UtilsService {
       confirmData.cancelButton = cancelButton;
 
     }
-
     const dialog = this.dialog.open(ConfirmAlertComponent, {
       data: confirmData
     });
-
-    // dialog.afterClosed().subscribe(result => {
-    //   console.log(`Dialog result: ${result}`);
-    // });
-
-    try {
-      const confirmAlertResult = await dialog.afterClosed().toPromise();
-      console.log(confirmAlertResult, 'confirmAlertResult');
-    } catch(err) {
-      console.error(err, ' Confirm utils error');
-    }
+    return await dialog.afterClosed().toPromise();
   }
 }
