@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LoaderService } from './services/global-services/loader-service/loader.service';
-import { UtilsService } from './services/global-services/utils/utils.service';
+import { UtilsService } from './services/global-services/utils-service/utils.service';
 
 @Component({
   selector: 'app-root',
