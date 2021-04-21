@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { LoaderService } from '../loader-service/loader.service';
 import { HttpErrorResponse, HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, finalize } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +23,11 @@ export class InterceptorService implements HttpInterceptor {
     }
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
-        // dodać obłsugę błędów jak już zorbię utilsy;
+        // dodać obłsugę błędów jak już zorbię utilsy, Apiservice i postawie server w Json;
         return throwError(error);
+      }),
+      finalize(() => {
+        this.loaderService.hideLoader();
       })
     )
   }
