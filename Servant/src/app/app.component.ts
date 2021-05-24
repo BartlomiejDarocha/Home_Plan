@@ -91,4 +91,10 @@ export class AppComponent {
       console.log('search Data', data);
     });
   }
+
+  public searchPostfull(searchValue: string): void {
+    this.apiService.get(`http://localhost:3000/posts?q=${searchValue}`).subscribe((data: any) => {
+      console.log('search Data', data);
+    });
+  }
 }
