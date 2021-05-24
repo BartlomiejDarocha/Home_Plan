@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { GlobalComponentModuleModule } from './components/global/global-component-module.module';
 import { UtilsService } from './services/global-services/utils-service/utils.service';
 import { AngularMaterialModule } from './angular-material.module';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './services/global-services/interceptor-service/interceptor.service';
 
 
@@ -21,7 +21,8 @@ import { InterceptorService } from './services/global-services/interceptor-servi
     AppRoutingModule,
     BrowserAnimationsModule,
     GlobalComponentModuleModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    HttpClientModule
   ],
   providers: [
     UtilsService,

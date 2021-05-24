@@ -37,6 +37,27 @@
 <div>
   <button mat-raised-button color="primary" (click)="testLoader()">Test loader</button>
 </div>
+<div>
+  <button mat-raised-button color="primary" (click)="getAllPosts()">Get All Posts</button>
+</div>
+<div>
+  <button mat-raised-button color="primary" (click)="getPostById(1)">Get Post id 1</button>
+</div>
+<div>
+  <button mat-raised-button color="primary" (click)="getPostByFilters('likes')">Get Posts sorted by likes</button>
+</div>
+<div>
+  <button mat-raised-button color="primary" (click)="getPostByFiltersDesc('likes')">Get Posts sorted by likes Desc</button>
+</div>
+<div>
+  <button mat-raised-button color="primary" (click)="makeNewPost()">Post newBodyPost</button>
+</div>
+<div>
+  <button mat-raised-button color="primary" (click)="deletePost(4)">Delete Post By id 4</button>
+</div>
+<div>
+  <button mat-raised-button color="primary" (click)="searchPost('nowy post')">Search nowy post</button>
+</div>
 <app-loader-global></app-loader-global>
 
 <router-outlet></router-outlet>

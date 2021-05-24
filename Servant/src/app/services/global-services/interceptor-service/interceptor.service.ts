@@ -23,6 +23,8 @@ export class InterceptorService implements HttpInterceptor {
     }
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
+        console.log( error, 'złapał Error');
+        // dorobić obsługe błędów
         // dodać obłsugę błędów jak już zorbię utilsy, Apiservice i postawie server w Json;
         return throwError(error);
       }),

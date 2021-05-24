@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from './services/global-services/api-service/api.service';
 import { LoaderService } from './services/global-services/loader-service/loader.service';
 import { UtilsService } from './services/global-services/utils-service/utils.service';
 
@@ -10,7 +11,11 @@ import { UtilsService } from './services/global-services/utils-service/utils.ser
 export class AppComponent {
   title = 'Servant';
 
-  constructor(private loaderService: LoaderService, private utils: UtilsService) {}
+  constructor(
+    private loaderService: LoaderService,
+    private utils: UtilsService,
+    private apiService: ApiService
+    ) {}
 
   public testLoader(): void {
     this.loaderService.showLoader();
@@ -34,5 +39,56 @@ export class AppComponent {
 
   public testConfirmDialogSetButtons(): void {
     this.utils.openConfirmAlert('Test ConfirmHeader', 'Test ConfirmContent', 'OKButton', 'CancelButton');
+  }
+
+  public getAllPosts(): void {
+    this.apiService.get('http://localhost:3000/posts').subscribe((data: any) => {
+      console.log('data All Post', data);
+      // narzie bez catch ale to później
+    });
+  }
+
+  public getPostById(id: number): void {
+    this.apiService.get(`http://localhost:3000/posts/${id}`).subscribe((data: any) => {
+      console.log('data By id', data);
+      // narzie bez catch ale to później
+    });
+  }
+
+  public getPostByFilters(filter: string): void {
+    this.apiService.get(`http://localhost:3000/posts?_sort=${filter}`).subscribe((data: any) => {
+      console.log('data sorted min to max Post', data);
+      // narzie bez catch ale to później
+    });
+  }
+
+  public getPostByFiltersDesc(filter: string): void {
+    this.apiService.get(`http://localhost:3000/posts?_sort=${filter}&_order=desc`).subscribe((data: any) => {
+      console.log('data sorted max to min Post', data);
+      // narzie bez catch ale to później
+    });
+  }
+
+  public makeNewPost(): void {
+    const newPostbody = {
+      tittle: 'nowy Post',
+      body: 'Body nowego postu',
+      likes: 18
+    }
+    this.apiService.post('http://localhost:3000/posts',newPostbody).subscribe((data: any) => {
+      console.log('Post newPostBody', data);
+    });
+  }
+
+  public deletePost(id: number): void {
+    this.apiService.delete(`http://localhost:3000/posts/${id}`).subscribe((data:any) => {
+      console.log('Delete Post by Id', data);
+    });
+  }
+
+  public searchPost(searchValue: string): void {
+    this.apiService.get(`http://localhost:3000/posts?_sort=id&q=${searchValue}`).subscribe((data: any) => {
+      console.log('search Data', data);
+    });
   }
 }
