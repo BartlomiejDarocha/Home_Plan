@@ -18,8 +18,10 @@ export class InterceptorService implements HttpInterceptor {
     const token: string = localStorage.getItem('token');
     // dodać token gdy już zrobię logowanie oraz Serwice do localStore
     request = request.clone({ headers: this.headers });
-    if (token) {
-      request = request.clone({headers: request.headers.set('Authorization', 'test' + token )});
+    // if (token) {
+    if (true) {
+      // request = request.clone({headers: request.headers.set('Authorization', 'test' + token )});
+      request = request.clone({headers: request.headers.set('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbHNvbkBlbWFpbC5jb20iLCJwYXNzd29yZCI6Im5pbHNvbiIsImlhdCI6MTYyMjc1MDA2NiwiZXhwIjoxNjIyNzUzNjY2fQ.nEni9LFiksZ68M39sVNrz8TQ_gAu3qjj5mgXGl81hqo' )});
     }
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {

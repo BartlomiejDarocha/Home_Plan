@@ -97,4 +97,20 @@ export class AppComponent {
       console.log('search Data', data);
     });
   }
+
+  public getAuthorization(): void {
+    const data = {
+      email: 'nilson@email.com',
+      password: 'nilson'
+    }
+    this.apiService.post(`http://localhost:8000/auth/login`, data).subscribe((data: any) => {
+      console.log('Get authorization token', data);
+    });
+  }
+
+  public authGetProducts(): void {
+    this.apiService.get(`http://localhost:8000/products`).subscribe((data: any) => {
+      console.log('Get Products Data', data);
+    });
+  }
 }
