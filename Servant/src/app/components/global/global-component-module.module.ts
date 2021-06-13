@@ -6,6 +6,7 @@ import { ConfirmAlertComponent } from './utils/confirm-alert/confirm-alert.compo
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { SketchComponent } from './sketch/sketch.component';
+import { Router, RouterModule } from '@angular/router';
 
 
 
@@ -19,6 +20,7 @@ import { SketchComponent } from './sketch/sketch.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     MatDialogModule,
     MatButtonModule
   ],

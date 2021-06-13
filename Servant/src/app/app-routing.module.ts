@@ -6,6 +6,12 @@ const routes: Routes = [
   {
     path: 'sketch',
     component: SketchComponent,
+  },
+  {
+    path: '', redirectTo: '/' , pathMatch: 'full'
+  },
+  {
+    path: '**', redirectTo: '/' , pathMatch: 'full'
   }
 ];
 
