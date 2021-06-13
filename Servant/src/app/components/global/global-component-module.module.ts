@@ -5,6 +5,7 @@ import { StandardAlertComponent } from './utils/standard-alert/standard-alert.co
 import { ConfirmAlertComponent } from './utils/confirm-alert/confirm-alert.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { SketchComponent } from './sketch/sketch.component';
 
 
 
@@ -14,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
     LoaderGlobalComponent,
     StandardAlertComponent,
     ConfirmAlertComponent,
+    SketchComponent,
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { MatButtonModule } from '@angular/material/button';
   exports: [
     LoaderGlobalComponent,
     StandardAlertComponent,
-    ConfirmAlertComponent
+    ConfirmAlertComponent,
+    SketchComponent
   ]
 })
 export class GlobalComponentModuleModule { }

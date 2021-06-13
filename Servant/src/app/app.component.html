@@ -1,72 +1,7 @@
-<div>
-  <button mat-raised-button color="primary" (click)="testDialog()">Test dialog</button>
-</div>
-
-<div>
-  <button mat-raised-button color="primary" (click)="testConfirmDialogDefButtons()">Test ConfirmdialogDef</button>
-</div>
-
-<div>
-  <button mat-raised-button color="primary" (click)="testConfirmDialogSetButtons()">Test ConfirmdialogSET</button>
-</div>
-
-<div>
-  <button mat-raised-button color="primary">Click me!</button>
-  <button mat-raised-button color="accent">Click me!</button>
-</div>
-<div class="textColorBox">
-  <div>To jest tekst pierwszy</div>
-  <div>To jest tekst drugi</div>
-</div>
-<div hidden>
-  <h3>Svg test</h3>
-  <svg path="/src/assets/svg/fingerprint-solid.svg"></svg>
-  <h4>test jako img</h4>
-  <img src="/assets/svg/fingerprint-solid.svg">
-</div>
-  <h4>Jako backgroud</h4>
-<a class="ic-standard2"></a>
-
-<div class="testMutliClass">
-  <h3>Tekst normal</h3>
-</div>
-
-<div class="testMutliClass-green">
-  <h3>Tekst green</h3>
-</div>
-<div>
-  <button mat-raised-button color="primary" (click)="testLoader()">Test loader</button>
-</div>
-<div>
-  <button mat-raised-button color="primary" (click)="getAllPosts()">Get All Posts</button>
-</div>
-<div>
-  <button mat-raised-button color="primary" (click)="getPostById(1)">Get Post id 1</button>
-</div>
-<div>
-  <button mat-raised-button color="primary" (click)="getPostByFilters('likes')">Get Posts sorted by likes</button>
-</div>
-<div>
-  <button mat-raised-button color="primary" (click)="getPostByFiltersDesc('likes')">Get Posts sorted by likes Desc</button>
-</div>
-<div>
-  <button mat-raised-button color="primary" (click)="makeNewPost()">Post newBodyPost</button>
-</div>
-<div>
-  <button mat-raised-button color="primary" (click)="deletePost(4)">Delete Post By id 4</button>
-</div>
-<div>
-  <button mat-raised-button color="primary" (click)="searchPost('nowy post')">Search nowy post</button>
-</div>
-<div>
-  <button mat-raised-button color="primary" (click)="searchPostfull('this')">Search full nowy post</button>
-</div>
-<div>
-  <button mat-raised-button color="primary" (click)="getAuthorization()">Login get authorization</button>
-</div>
-<div>
-  <button mat-raised-button color="primary" (click)="authGetProducts()">GetProducts auth</button>
-</div>
+<h1>
+  Servant Start Page
+</h1>
+  <a routerLink="sketch">Go to sketch</a>
 <app-loader-global></app-loader-global>
 
 <router-outlet></router-outlet>
