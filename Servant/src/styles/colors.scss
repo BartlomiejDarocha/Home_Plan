@@ -2,3 +2,7 @@ $base: rgb(55, 92, 126);
 $active: rgb(18, 138, 18);
 $text-one: #c4c4c4;
 $text-two: #baa609;
+html {
+  --scrollbarBG: #df6219;
+  --thumbBG: #77df16;
+}
