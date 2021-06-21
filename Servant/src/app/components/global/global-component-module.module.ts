@@ -7,6 +7,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { SketchComponent } from './sketch/sketch.component';
 import { Router, RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -16,6 +18,8 @@ import { Router, RouterModule } from '@angular/router';
     LoaderGlobalComponent,
     StandardAlertComponent,
     ConfirmAlertComponent,
+    HomeComponent,
+    HeaderComponent,
     SketchComponent,
   ],
   imports: [
