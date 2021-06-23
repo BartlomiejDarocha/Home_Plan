@@ -1,0 +1,7 @@
+@import "/src/styles/colors.scss";
+@import "/src/styles/fonts.scss";
+@import "/src/styles/mixins.scss";
+
+.fingerPrint {
+ @include iconsSd(url('/assets/svg/user.svg'), 50px, 50px, $text-two);
+}
