@@ -20,16 +20,34 @@
       h1 {
         margin: 0;
       }
+      div {
+        display: none;
+      }
     }
     .logo {
       max-height: 50px;
       max-width: 50px;
       background-image: url("/assets/img/logo/servant_logo.jpg");
+      background-repeat: no-repeat;
       display: block;
       height: 100%;
       width: 100%;
       background-size: contain;
     }
+  }
+  .menu_icon {
+    @include iconsSd(url('/assets/svg/user.svg'), 50px, 50px, $text-two);
+  }
+  @media (min-width: 991px) {
+    .text_wrapper {
+      .logo_text {
+        div {
+          display: block;
+        }
+      }
+    }
+    
+
   }
 }
 
