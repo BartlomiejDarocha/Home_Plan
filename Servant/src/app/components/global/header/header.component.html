@@ -1,17 +1,21 @@
 <div class="header">
-  <div class="text_wrapper">
+  <div class="padding_left text_wrapper">
     <div class="logo"></div>
     <div class="logo_text">
       <h1>Servant</h1>
       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, modi.</div>
     </div>
   </div>
-  <div class="menu_wrapper">
+  <div *ngIf="logged" class="menu_wrapper">
     <a class="menu_icon"></a>
   </div>
-  <div class="options_wrapper">
-    <a class="option_icon"></a>
-    <a class="user_icon"></a>
+  <div *ngIf="logged" class="options_wrapper">
+    <div class="padding_right">
+      <a class="option_icon"></a>
+    </div>
+    <div class="padding_right">
+      <a class="user_icon"></a>
+    </div>
   </div>
 </div>
 

@@ -2,6 +2,14 @@
 @import "/src/styles/fonts.scss";
 @import "/src/styles/mixins.scss";
 
+.padding_right {
+  padding-right: 0.5rem;
+}
+
+.padding_left {
+  padding-left: 0.5rem;
+}
+
 .header {
   background-color: $background-second;
   max-height: 4.5rem;
@@ -57,12 +65,11 @@
     .options_wrapper { 
       display: flex;
       align-items: center;
-      padding-right: 0.5rem;
       .option_icon {
-        @include iconsSd(url('/assets/svg/gear.svg'), 40px, 40px, $font-main);
+        @include iconsSd(url('/assets/svg/gear.svg'), 35px, 35px, $font-main);
       }
       .user_icon {
-        @include iconsSd(url('/assets/svg/user.svg'), 40px, 40px, $font-main);
+        @include iconsSd(url('/assets/svg/user.svg'), 35px, 35px, $font-main);
       }
     }
     .menu_wrapper {
