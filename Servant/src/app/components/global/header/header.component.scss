@@ -35,8 +35,16 @@
       background-size: contain;
     }
   }
-  .menu_icon {
-    @include iconsSd(url('/assets/svg/user.svg'), 50px, 50px, $text-two);
+  .menu_wrapper {
+    display: flex;
+    align-items: center;
+    padding-right: 0.6rem;
+    .menu_icon {
+      @include iconsSd(url('/assets/svg/menu.svg'), 35px, 35px, $font-main);
+    }
+  }
+  .options_wrapper {
+    display: none;
   }
   @media (min-width: 991px) {
     .text_wrapper {
@@ -46,11 +54,19 @@
         }
       }
     }
-    
-
+    .options_wrapper { 
+      display: flex;
+      align-items: center;
+      padding-right: 0.5rem;
+      .option_icon {
+        @include iconsSd(url('/assets/svg/gear.svg'), 40px, 40px, $font-main);
+      }
+      .user_icon {
+        @include iconsSd(url('/assets/svg/user.svg'), 40px, 40px, $font-main);
+      }
+    }
+    .menu_wrapper {
+      display: none;
+    }
   }
-}
-
-.fingerPrint {
- @include iconsSd(url('/assets/svg/user.svg'), 50px, 50px, $text-two);
 }

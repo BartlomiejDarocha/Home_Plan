@@ -5,4 +5,6 @@
   background-color: $color;
   -webkit-mask-image: $url;
   mask-image: $url;
+  mask-size: contain;
+  mask-repeat: no-repeat;
 }
