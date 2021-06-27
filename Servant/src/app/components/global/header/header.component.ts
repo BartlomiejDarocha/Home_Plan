@@ -1,4 +1,4 @@
-import { Input } from '@angular/core';
+import { EventEmitter, Input, Output } from '@angular/core';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
  @Input() logged = false;
+ @Output() openSideMenu$ = new EventEmitter();
   constructor() { }
+
+  public openSideMenu(): void {
+    this.openSideMenu$.emit();
+  }
 }

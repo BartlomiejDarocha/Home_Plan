@@ -22,6 +22,9 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG) ;
 }
+mat-drawer-container {
+  height: 100vh;
+}
 
 
 
