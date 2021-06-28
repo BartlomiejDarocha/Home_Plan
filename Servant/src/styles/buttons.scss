@@ -1,0 +1,12 @@
+@import "/src/styles/colors.scss";
+
+.classic_button {
+  max-height: 2.5rem;
+  line-height: 1.6;
+  color: $font-main;
+  width: 9rem;
+  min-width: 5rem;
+  border: 2.5px solid currentColor;
+  border-color: rgba(4, 253, 160, 0.75);
+  background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(93,93,93,1) 51%);
+}
