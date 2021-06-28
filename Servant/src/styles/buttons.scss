@@ -13,6 +13,7 @@
   border-radius: 0.8rem;
   background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(93,93,93,1) 51%);
 }
-// .classic_button:hover {
-//   background-color: green;
-// }
+.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay, .mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay {
+  opacity: 0.12 !important;
+}
+
