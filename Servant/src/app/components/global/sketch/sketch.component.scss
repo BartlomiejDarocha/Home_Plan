@@ -7,6 +7,9 @@ body {
   -webkit-mask-image: url('/assets/svg/background/background.svg');
   mask-image: url('/assets/svg/background/background.svg');
 }
+.padding {
+  padding: 1rem;
+}
 .testButton {
   width: 100%;
   height: 200px;

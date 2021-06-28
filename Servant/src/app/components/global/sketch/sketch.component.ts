@@ -10,6 +10,7 @@ import { UtilsService } from 'src/app/services/global-services/utils-service/uti
 })
 export class SketchComponent {
   title = 'Servant';
+  public disabledButton = false;
 
   constructor(
     private loaderService: LoaderService,
@@ -22,6 +23,10 @@ export class SketchComponent {
     setTimeout(() => {
       this.loaderService.hideLoader();
     }, 2000);
+  }
+
+  public setDisabled(): void {
+    this.disabledButton = !this.disabledButton;
   }
 
   public testDialog(): void {

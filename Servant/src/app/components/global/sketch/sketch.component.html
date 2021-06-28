@@ -8,7 +8,12 @@
   </div>
 
   <div class="testButton">
-    <button class="classic_button" mat-stroked-button color="">Submit</button>
+    <div class="padding">
+      <button class="classic_button" mat-stroked-button (click)="setDisabled()">set Disabled</button>
+    </div>
+    <div class="padding">
+      <button class="classic_button" [class.disabled]="disabledButton" [disabled]="disabledButton" mat-stroked-button color="">Submit</button>
+    </div>
   </div>
   
   <div>
