@@ -25,23 +25,14 @@
   opacity: 0.12 !important;
 }
 
-.classic_icon_button {
-  border: none;
-  padding: 0;
+.icon_button {
   min-width: 35px;
+  min-height: 35px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  a:hover {
+    @include iconsButtonHover(#4cda53)
+  }
 }
-.classic_icon_button:active {
-  background: red;
-}
-// .classic_icon_button:hover {
-//   .mat-button-focus-overlay {
-//     display: none;
-//   }
-//   .option_icon {
-//     background-color:#4cda53;
-//   }
-// }
-
-
-
-

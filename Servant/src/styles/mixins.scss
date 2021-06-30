@@ -8,3 +8,7 @@
   mask-size: contain;
   mask-repeat: no-repeat;
 }
+
+@mixin iconsButtonHover ($color) {
+  background-color: $color;
+}
