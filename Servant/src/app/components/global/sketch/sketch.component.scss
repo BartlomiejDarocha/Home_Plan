@@ -11,7 +11,7 @@ body {
 
 .icon_button {
     .option_icon {
-    @include iconsSd(url('/assets/svg/gear.svg'), 35px, 35px, $font-main);
+    @include iconsSd(url('/assets/svg/gear.svg'), 35px, 35px, $main-green);
     }
 };
 

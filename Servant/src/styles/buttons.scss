@@ -10,11 +10,11 @@
   width: 10rem;
   min-width: 10rem;
   border: 2.5px solid currentColor;
-  border-color: #66bb6a;
+  border-color: $main-green;
   border-radius: 0.8rem;
   background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(93,93,93,1) 51%);
   &:hover:not(.disabled) {
-    border-color: #4cda53;
+    border-color: $main-green-active;
   }
 }
 .disabled {
@@ -32,7 +32,14 @@
   border: none;
   cursor: pointer;
   padding: 0;
+  a {
+    transition: background-color 100;
+  }
   a:hover {
-    @include iconsButtonHover(#4cda53)
+    background-color: $main-green-active !important;
+  }
+  a:active {
+    background-color:$font-main !important;
   }
 }
+

@@ -63,11 +63,13 @@
     .options_wrapper { 
       display: flex;
       align-items: center;
-      .option_icon {
-        @include iconsSd(url('/assets/svg/gear.svg'), 35px, 35px, $font-main);
-      }
-      .user_icon {
-        @include iconsSd(url('/assets/svg/user.svg'), 35px, 35px, $font-main);
+      .icon_button {
+        .option_icon {
+          @include iconsSd(url('/assets/svg/gear.svg'), 35px, 35px, $main-green);
+        }
+        .user_icon {
+          @include iconsSd(url('/assets/svg/user.svg'), 35px, 35px, $main-green);
+        }
       }
     }
     .menu_wrapper {
