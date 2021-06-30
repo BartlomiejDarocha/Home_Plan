@@ -8,6 +8,18 @@
   padding-left: 0.5rem;
 }
 
+.icon_button {
+  .option_icon {
+    @include iconsSd(url('/assets/svg/gear.svg'), 35px, 35px, $main-green);
+  }
+  .user_icon {
+    @include iconsSd(url('/assets/svg/user.svg'), 35px, 35px, $main-green);
+  }
+  .menu_icon {
+    @include iconsSd(url('/assets/svg/menu.svg'), 35px, 35px, $main-green);
+  }
+}
+
 .header {
   background-color: $background-second;
   max-height: 4.5rem;
@@ -45,9 +57,6 @@
     display: flex;
     align-items: center;
     padding-right: 0.6rem;
-    .menu_icon {
-      @include iconsSd(url('/assets/svg/menu.svg'), 35px, 35px, $font-main);
-    }
   }
   .options_wrapper {
     display: none;
@@ -63,14 +72,6 @@
     .options_wrapper { 
       display: flex;
       align-items: center;
-      .icon_button {
-        .option_icon {
-          @include iconsSd(url('/assets/svg/gear.svg'), 35px, 35px, $main-green);
-        }
-        .user_icon {
-          @include iconsSd(url('/assets/svg/user.svg'), 35px, 35px, $main-green);
-        }
-      }
     }
     .menu_wrapper {
       display: none;

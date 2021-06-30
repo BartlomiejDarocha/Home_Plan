@@ -6,8 +6,10 @@
       <div>Jestem do twoich usług</div>
     </div>
   </div>
-  <div *ngIf="logged" (click)="openSideMenu()" class="menu_wrapper">
-    <a class="menu_icon"></a>
+  <div *ngIf="logged" class="menu_wrapper">
+    <button (click)="openSideMenu()" class="icon_button">
+      <a class="menu_icon"></a>
+    </button>
   </div>
   <div *ngIf="logged" class="options_wrapper">
     <div class="padding_right">
