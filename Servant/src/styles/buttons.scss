@@ -20,7 +20,28 @@
 .disabled {
   border-color: rgba(217, 214, 214, 0.77);
 }
+
 .mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay, .mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay {
   opacity: 0.12 !important;
 }
+
+.classic_icon_button {
+  border: none;
+  padding: 0;
+  min-width: 35px;
+}
+.classic_icon_button:active {
+  background: red;
+}
+// .classic_icon_button:hover {
+//   .mat-button-focus-overlay {
+//     display: none;
+//   }
+//   .option_icon {
+//     background-color:#4cda53;
+//   }
+// }
+
+
+
 

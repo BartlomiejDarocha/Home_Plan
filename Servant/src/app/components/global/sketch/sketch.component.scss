@@ -7,6 +7,11 @@ body {
   -webkit-mask-image: url('/assets/svg/background/background.svg');
   mask-image: url('/assets/svg/background/background.svg');
 }
+
+.option_icon {
+    @include iconsSd(url('/assets/svg/gear.svg'), 35px, 35px, $font-main);
+}
+
 .padding {
   padding: 1rem;
 }
