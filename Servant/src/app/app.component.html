@@ -1,9 +1,9 @@
 <mat-drawer-container [hasBackdrop]="true">
   <mat-drawer #sideMenu mode="over" position="end">I'm a drawer</mat-drawer>
   <mat-drawer-content>
-    <div class="main_content">
+    <app-loader-global></app-loader-global>
+    <div class="outlet_content">
       <app-header [logged]="true" (openSideMenu$)="sideMenu.toggle()"></app-header>
-      <app-loader-global></app-loader-global>
       <router-outlet></router-outlet>
       <app-footer></app-footer>
     </div>
