@@ -9,6 +9,7 @@ import { SketchComponent } from './sketch/sketch.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -21,6 +22,7 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
     HeaderComponent,
     SketchComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { HomeComponent } from './home/home.component';
     StandardAlertComponent,
     ConfirmAlertComponent,
     SketchComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class GlobalComponentModuleModule { }
