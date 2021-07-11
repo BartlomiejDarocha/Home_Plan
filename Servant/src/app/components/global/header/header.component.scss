@@ -43,14 +43,7 @@
       }
     }
     .logo {
-      max-height: 60px;
-      max-width: 60px;
-      background-image: url("/assets/img/logo/servant_logo.jpg");
-      background-repeat: no-repeat;
-      display: block;
-      height: 100%;
-      width: 100%;
-      background-size: contain;
+      @include iconsSd(url('/assets/svg/logo_2.svg'), 45px, 45px, $main-green);
     }
   }
   .menu_wrapper {
