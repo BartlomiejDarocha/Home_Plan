@@ -1,0 +1,45 @@
+@import "/src/styles/colors.scss";
+
+.classic_button {
+  font-family: "Ropa Sans", sans-serif;
+  font-size: 1.07rem;
+  max-height: 3rem;
+  height: 3rem;
+  line-height: 1.6;
+  color: $font-main;
+  width: 10rem;
+  min-width: 10rem;
+  border: 2.5px solid currentColor;
+  border-color: $main-green;
+  border-radius: 0.8rem;
+  background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(93,93,93,1) 51%);
+  &:hover:not(.disabled) {
+    border-color: $main-green-active;
+  }
+}
+.disabled {
+  border-color: rgba(217, 214, 214, 0.77);
+}
+
+.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay, .mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay {
+  opacity: 0.12 !important;
+}
+
+.icon_button {
+  min-width: 35px;
+  min-height: 35px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  a {
+    transition: background-color 100;
+  }
+  a:hover {
+    background-color: $main-green-active !important;
+  }
+  a:active {
+    background-color:$font-main !important;
+  }
+}
+

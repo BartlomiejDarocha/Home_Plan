@@ -6,9 +6,10 @@ import { ConfirmAlertComponent } from './utils/confirm-alert/confirm-alert.compo
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { SketchComponent } from './sketch/sketch.component';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -21,6 +22,7 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
     HeaderComponent,
     SketchComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,9 @@ import { HomeComponent } from './home/home.component';
     LoaderGlobalComponent,
     StandardAlertComponent,
     ConfirmAlertComponent,
-    SketchComponent
+    SketchComponent,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class GlobalComponentModuleModule { }

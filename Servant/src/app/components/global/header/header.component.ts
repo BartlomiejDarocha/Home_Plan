@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
-
+export class HeaderComponent {
+ @Input() logged = false;
+ @Output() openSideMenu$ = new EventEmitter();
   constructor() { }
 
-  ngOnInit(): void {
+  public openSideMenu(): void {
+    this.openSideMenu$.emit();
   }
-
 }
