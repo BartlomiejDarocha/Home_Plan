@@ -9,5 +9,16 @@
   mask-repeat: no-repeat;
 }
 
+@mixin iconsNoColor($url, $width: 25px, $height: 25px, $color) {
+  display: block;
+  width: $width;
+  height: $height;
+  // background-color: $color;
+  -webkit-mask-image: $url;
+  mask-image: $url;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
 
 

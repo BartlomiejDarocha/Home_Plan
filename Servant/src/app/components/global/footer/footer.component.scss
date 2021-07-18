@@ -1,3 +1,13 @@
+@import "/src/styles/common-imports.scss";
+
+.icon_angular {
+  @include iconsSd(url('/assets/svg/gear.svg'), 35px, 35px, none);
+}
+
+.icon_angular2 {
+  @include iconsNoColor(url('/assets/svg/gear.svg'), 35px, 35px);
+}
+
 .fotterWraper {
   height: 3rem;
   background: black;
