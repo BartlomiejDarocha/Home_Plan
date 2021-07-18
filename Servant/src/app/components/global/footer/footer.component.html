@@ -1,12 +1,11 @@
 <div class="fotterWraper">
   <div>Home project-all rights reserved © 2021</div>
-  <div>
-    <div>angular</div>
-    <div>
-      <a class="icon_angular"></a>
-      <a class="icon_materials"></a>
-      <a class="icon_rxjs"></a>
-      <a class="icon_node"></a>
-    </div>
-  </div>
+  <ul>
+    <li *ngFor="let item of poweredList">
+      <a>
+        <span [class]="'icon_' + item.icon"></span>
+        <span [innerText]="item.name"></span>
+      </a>
+    </li>
+  </ul>
 </div>

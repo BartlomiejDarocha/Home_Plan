@@ -20,4 +20,11 @@
 .fotterWraper {
   height: 3rem;
   background: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  ul {
+    display: flex;
+    list-style-type: none;
+  }
 }

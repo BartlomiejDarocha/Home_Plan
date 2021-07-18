@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   public poweredList = [
-    {name: 'Angular', icon:'', url: ''},
-    {name: 'Angular materials', icon:'', url: ''},
-    {name: 'RxJs', icon:'', url: ''},
-    {name: 'Node', icon:'', url: ''},
+    {name: 'Angular', icon: 'angular', url: ''},
+    {name: 'Angular materials', icon: 'materials', url: ''},
+    {name: 'RxJs', icon: 'rxjs', url: ''},
+    {name: 'Node', icon: 'node', url: ''},
   ];
 
   constructor() { }
