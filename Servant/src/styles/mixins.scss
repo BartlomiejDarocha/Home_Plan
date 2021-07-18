@@ -14,7 +14,7 @@
   width: $width;
   height: $height;
   background-image: $url;
-  background-size: 100%;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
