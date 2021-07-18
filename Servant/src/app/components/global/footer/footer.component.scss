@@ -8,10 +8,6 @@
   @include iconsNoColor(url('/assets/svg/material.svg'), 35px, 35px);
 }
 
-.icon_materials {
-  @include iconsNoColor(url('/assets/svg/material.svg'), 35px, 35px);
-}
-
 .icon_rxjs {
   @include iconsNoColor(url('/assets/svg/rxjs.svg'), 35px, 35px);
 }
