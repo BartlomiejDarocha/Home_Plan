@@ -3,6 +3,7 @@
 .icon_angular {
   @include iconsNoColor(url('/assets/svg/angular.svg'), 23px, 23px);
   background-position: -2px;
+  margin-right: 0 !important;
 }
 
 .icon_materials {
@@ -16,7 +17,6 @@
 .icon_node {
   @include iconsNoColor(url('/assets/svg/nodejs.svg'), 18px, 18px);
 }
-
 
 .fotter_wraper {
   color: $font-main;

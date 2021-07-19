@@ -33,6 +33,9 @@ body::-webkit-scrollbar-thumb {
   .main {
     min-height: 100%;
     @media (min-height: 100vh) {
+      min-height:calc(100vh - 13rem);
+    }
+    @media (min-width: 991px) {
       min-height:calc(100vh - 7.5rem);
     }
   }
