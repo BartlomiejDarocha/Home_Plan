@@ -50,3 +50,42 @@
 .separator {
   height: 150px;
 }
+
+.hexSpinner {
+  height: 100px;
+  width: 100px;
+  .hexBox {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    div {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      border: 10px solid $main-green;
+      transform: rotate(60deg);
+    }
+    div:nth-child(1) {
+      // border-left-color: $main-green;
+    }
+    // div:nth-child(2) {
+    //   border-top-color: $main-green;
+    // }
+  
+    div:nth-child(3), div:nth-child(4) {
+      border-color: $main-green;
+      // transform: rotate(0);
+      // top: 50%;
+      // left: -21%;
+    }
+    div:nth-child(4) {
+      // left: 21%;
+    }
+    div:nth-child(5), div:nth-child(6) {
+      // top: 100%;
+    }
+    div:nth-child(5) {
+      // top: 100%;
+    }
+  }
+}
