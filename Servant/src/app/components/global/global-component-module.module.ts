@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { LogoSpinnerComponent } from './logo-spinner/logo-spinner.component';
 
 
 
@@ -23,6 +24,7 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     SketchComponent,
     FooterComponent,
+    LogoSpinnerComponent,
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { FooterComponent } from './footer/footer.component';
     ConfirmAlertComponent,
     SketchComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LogoSpinnerComponent
   ]
 })
 export class GlobalComponentModuleModule { }
