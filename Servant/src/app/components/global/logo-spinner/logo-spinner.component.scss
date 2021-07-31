@@ -63,29 +63,30 @@
       width: 100%;
       position: absolute;
       border: 10px solid $main-green;
+    }
+    .box1 {
       transform: rotate(60deg);
     }
-    div:nth-child(1) {
-      // border-left-color: $main-green;
+    .box2 {
+      transform: rotate(120deg);
+      left: 37px;
     }
-    // div:nth-child(2) {
-    //   border-top-color: $main-green;
-    // }
-  
-    div:nth-child(3), div:nth-child(4) {
-      border-color: $main-green;
-      // transform: rotate(0);
-      // top: 50%;
-      // left: -21%;
+    .box3 {
+      top: 32px;
+      left: -19px;
     }
-    div:nth-child(4) {
-      // left: 21%;
+    .box4 {
+      top: 32px;
+      left: 57px;
     }
-    div:nth-child(5), div:nth-child(6) {
-      // top: 100%;
+    .box5 {
+      top: 64px;
+      transform: rotate(120deg);
     }
-    div:nth-child(5) {
-      // top: 100%;
+    .box6 {
+      transform: rotate(60deg);
+      top: 64px;
+      left: 38px;
     }
   }
 }
