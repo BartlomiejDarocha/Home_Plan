@@ -64,29 +64,52 @@
       position: absolute;
       border: 10px solid $main-green;
     }
+    .groundMain {
+      background-color: white;
+      z-index: 10;
+      border: 0;
+    }
     .box1 {
       transform: rotate(60deg);
+    }
+    .ground1{
+      transform: rotate(60deg) translate(10px);
     }
     .box2 {
       transform: rotate(120deg);
       left: 37px;
     }
+    .ground2{
+      transform: rotate(120deg) translate(10px);
+    }
     .box3 {
       top: 32px;
       left: -19px;
+    }
+    .ground3{
+      transform: translate(10px);
     }
     .box4 {
       top: 32px;
       left: 57px;
     }
+    .ground4{
+      transform: translate(-10px);
+    }
     .box5 {
       top: 64px;
       transform: rotate(120deg);
+    }
+    .ground5{
+      transform: rotate(120deg) translate(-10px);
     }
     .box6 {
       transform: rotate(60deg);
       top: 64px;
       left: 38px;
+    }
+    .ground6{
+      transform: rotate(60deg) translate(-10px);
     }
   }
 }
