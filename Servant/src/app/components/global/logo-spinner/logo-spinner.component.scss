@@ -54,7 +54,7 @@
 .hexSpinner {
   height: 100px;
   width: 100px;
-  .hexBox {
+  .hexBox, .hexBoxUnder {
     position: relative;
     height: 100px;
     width: 100px;
@@ -101,11 +101,15 @@
           border-right: 85px solid green;
         }
       }
-      // &.under{
-      //   z-index: 9;
-      //   transform: scale(2);
-      //   border-color: red;
-      // }
+    }
+  }
+  .hexBoxUnder {
+    position:absolute;
+    z-index: 9;
+    transform: scale(1.2);
+    top: 0;
+    .triangleMain {
+      border-color: red;
     }
   }
 }
