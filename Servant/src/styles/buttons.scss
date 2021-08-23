@@ -18,7 +18,7 @@
   }
 }
 .disabled {
-  border-color: rgba(217, 214, 214, 0.77);
+  border-color: $disabled-border;
 }
 
 .mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay, .mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay {
