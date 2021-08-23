@@ -13,25 +13,6 @@
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    .spinner {
-      width: 100px;
-      height: 100px;
-      position: relative;
-      div {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border: 10px solid transparent;
-        border-top-color: $main-green;
-        border-radius: 50%;
-        animation: spinnerOne 1.2s linear infinite;
-      }
-      div:nth-child(2) {
-        border: 10px solid transparent;
-        border-bottom-color: $main-green;
-        animation: spinnerTwo 1.2s linear infinite;
-      }
-    }
   }
 }
 
@@ -49,67 +30,4 @@
 
 .separator {
   height: 150px;
-}
-
-.hexSpinner {
-  height: 100px;
-  width: 100px;
-  .hexBox, .hexBoxUnder {
-    position: relative;
-    height: 100px;
-    width: 100px;
-    div {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-    }
-    .centerCircle {
-      border-radius: 50%;
-      height: 100%;
-      width: 100%;
-      z-index: 10;
-      background-color: green;
-      left: 34%;
-    }
-    .triangleMain {
-      width: 0;
-      height: 0;
-      border-top: 50px solid transparent;
-      border-bottom: 50px solid transparent;
-      border-right-color: transparent;
-      border-left: 85px solid green;
-      z-index: 10;    
-      &.triangleCouple1 {
-        &.right {
-          border-right: 85px solid green;
-          border-left: 85px solid transparent;
-        }
-      }
-      &.triangleCouple2 {
-        display: none;
-        transform: rotate(60deg);
-        &.right {
-          display: block;
-          border-right: 85px solid green;
-        }
-      }
-      &.triangleCouple3 {
-        display: none;
-        transform: rotate(120deg);
-        &.right {
-          display: block;
-          border-right: 85px solid green;
-        }
-      }
-    }
-  }
-  .hexBoxUnder {
-    position:absolute;
-    z-index: 9;
-    transform: scale(1.2);
-    top: 0;
-    .triangleMain {
-      border-color: red;
-    }
-  }
 }
