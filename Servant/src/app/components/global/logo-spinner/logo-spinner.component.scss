@@ -17,7 +17,12 @@
 }
 
 .Sband {
-  @include iconsSd(url('/assets/svg/Sbrand.svg'), 25px, 25px, $main-green);
+  @include iconsSd(url('/assets/svg/Sbrand.svg'), 28px, 28px, $background-main);
+  position: absolute;
+  left: 20px;
+  z-index: 2;
+  top: 15px;;
+  bottom: unset;
 }
 
 .hexagon {
@@ -29,6 +34,7 @@
   margin: 14.43px 0;
   border-left: solid 5px #333333;
   border-right: solid 5px #333333;
+  animation: spinnerOne 1.2s linear infinite;
 }
 
 .hexagon:before,
