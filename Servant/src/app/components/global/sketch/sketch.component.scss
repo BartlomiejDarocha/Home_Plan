@@ -53,3 +53,14 @@
     -webkit-mask-image: url('/assets/svg/user.svg');
     mask-image: url('/assets/svg/user.svg');
 }
+
+
+.testInput {
+    height: 200px;
+    border: solid blue 2px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
