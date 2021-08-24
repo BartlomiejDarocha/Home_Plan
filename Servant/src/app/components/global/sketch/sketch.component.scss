@@ -19,6 +19,13 @@
   align-content: center;
   padding: 50px;
 }
+.testInput {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .textColorBox {
     height: 500px;
     width: 100%;
@@ -57,10 +64,19 @@
 
 .testInput {
     height: 200px;
-    border: solid blue 2px;
-    border-radius: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    .std_input {
+        background: black;
+        color: silver;
+        padding: 10px;
+        border: solid silver 1px;
+        border-radius: 4px;
+    }
+    .std_input:focus-visible {
+        border: solid red 1px;
+    }
+    
 }
