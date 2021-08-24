@@ -8,3 +8,12 @@
   mask-size: contain;
   mask-repeat: no-repeat;
 }
+
+@mixin iconsNoColor($url, $width: 25px, $height: 25px) {
+  display: block;
+  min-width: $width;
+  min-height: $height;
+  background-image: $url;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

@@ -1,3 +1,14 @@
-<div class="fotterWraper">
-  <div>test</div>
+<div class="fotter_wraper">
+  <div>Home project all rights reserved © 2021</div>
+  <div class="powerder_box">
+    <div class="powerder_title">W oparciu o:</div>
+    <ul>
+      <li *ngFor="let item of poweredList">
+        <a [href]="item.url" [title]="'Oficjalna strona ' + item.name" target="_blank">
+          <span [class]="'icon_' + item.icon"></span>
+          <span [innerText]="item.name"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
