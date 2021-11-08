@@ -1,0 +1,14 @@
+.common_input {
+  outline: none;
+  max-height: 2.2rem;
+  background: $blackInput;
+  color: $font-main-highlights;
+  font-weight: 500;
+  padding: 10px;
+  border: solid $font-main-highlights 1px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.common_input:focus-visible {
+  border: solid $main-green 1px;
+}
