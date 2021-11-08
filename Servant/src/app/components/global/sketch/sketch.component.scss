@@ -68,16 +68,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    .std_input {
-        background: black;
-        color: silver;
-        padding: 10px;
-        border: solid silver 1px;
-        border-radius: 4px;
-    }
-    .std_input:focus-visible {
-        border: solid red 1px;
+    .formWrapper {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        .std_input {
+            outline: none;
+            max-height: 2.2rem;
+            background: $blackInput;
+            color: $font-main-highlights;
+            font-weight: 500;
+            padding: 10px;
+            border: solid $font-main-highlights 1px;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .std_input:focus-visible {
+            border: solid $main-green 2px;
+        }
     }
     
 }
