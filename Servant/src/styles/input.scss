@@ -8,7 +8,11 @@
   border: solid $font-main-highlights 1px;
   border-radius: 4px;
   font-size: 1rem;
-}
-.common_input:focus-visible {
-  border: solid $main-green 1px;
+  &:focus-visible {
+    border: solid $main-green 1px;
+  }
+  &:disabled {
+    border: solid $disabled-border 1px;
+    background: $blackInput;
+  }
 }
