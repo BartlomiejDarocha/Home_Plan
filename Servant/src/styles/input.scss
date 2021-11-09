@@ -13,6 +13,6 @@
   }
   &:disabled {
     border: solid $disabled-border 1px;
-    background: $blackInput;
+    background: $background-disabled;
   }
 }

@@ -12,13 +12,13 @@
       <button class="classic_button" mat-stroked-button (click)="setDisabled()">set Disabled</button>
     </div>
     <div class="padding">
-      <button class="classic_button" [class.disabled]="disabledButton" [disabled]="disabledButton" mat-stroked-button color="">Submit</button>
+      <button class="classic_button" [class.disabled]="disabledButton" [disabled]="disabledButton" mat-stroked-button>Submit</button>
     </div>
   </div>
 
   <div class="testInput">
     <div class="formWrapper">
-      <input class="common_input" placeholder="Ulubione danie">
+      <input [disabled]="disabledButton" class="common_input" placeholder="Ulubione danie">
     </div>
   </div>
 
