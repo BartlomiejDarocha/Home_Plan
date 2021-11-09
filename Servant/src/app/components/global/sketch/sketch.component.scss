@@ -74,7 +74,9 @@
         display: flex;
         justify-content: center;
         .inputWrapper::before {
-            content: "test";
+            content: "";
+            @include iconsSd(url('/assets/svg/gear.svg'), 35px, 35px, $main-green);
+            display: inline-block;
         }
     }
 }
