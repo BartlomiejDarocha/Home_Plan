@@ -73,5 +73,11 @@
         width: 50%;
         display: flex;
         justify-content: center;
+        .testInputIcon::before {
+            @include iconsSd(url('/assets/svg/user.svg'), 25px, 25px, $background-second);
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
     }
 }

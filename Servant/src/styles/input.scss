@@ -1,8 +1,5 @@
 @import "/src/styles/mixins.scss";
 
-@mixin paddingInput() {
-  
-}
 .common_input {
   @include inputMixin();
 }
@@ -15,8 +12,4 @@
 }
 .inputFrontIcon::before {
   content: "";
-  @include iconsSd(url('/assets/svg/gear.svg'), 25px, 25px, $main-green);
-  position: absolute;
-  top: 5px;
-  left: 5px;
 }
