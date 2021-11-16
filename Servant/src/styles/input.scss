@@ -1,5 +1,8 @@
 @import "/src/styles/mixins.scss";
 
+@mixin paddingInput() {
+  
+}
 .common_input {
   @include inputMixin();
 }

@@ -1,3 +1,4 @@
+// ICONS
 @mixin iconsSd($url, $width: 25px, $height: 25px, $color) {
   display: block;
   width: $width;
@@ -22,6 +23,7 @@
   position: relative;
 }
 
+// INPUTS
 @mixin inputMixin() {
   outline: none;
   max-height: 2.2rem;
@@ -40,3 +42,5 @@
     background: $background-disabled;
   }
 }
+
+
