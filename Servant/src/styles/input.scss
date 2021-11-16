@@ -2,20 +2,15 @@
 
 .common_input {
   @include inputMixin();
-  // outline: none;
-  // max-height: 2.2rem;
-  // background: $blackInput;
-  // color: $font-main-highlights;
-  // font-weight: 500;
-  // padding: 0.625rem;
-  // border: solid $font-main-highlights 1px;
-  // border-radius: 4px;
-  // font-size: 1rem;
-  // &:focus-visible {
-  //   border: solid $main-green 1px;
-  // }
-  // &:disabled {
-  //   border: solid $disabled-border 1px;
-  //   background: $background-disabled;
-  // }
+}
+
+.inputFrontIcon {
+  .common_input {
+    padding: 10px 10px 10px 35px;
+  }
+}
+.inputFrontIcon::before {
+  content: "";
+  @include iconsSd(url('/assets/svg/gear.svg'), 25px, 25px, $main-green);
+  position: absolute;
 }
