@@ -74,10 +74,15 @@
         width: 50%;
         display: flex;
         justify-content: center;
-        .inputWrapper::before {
+        .formWrapperBefore {
+            // padding: 10px 10px 10px 35px;
+            position: relative;
+        }
+        .formWrapperBefore::before {
             content: "";
-            @include iconsSd(url('/assets/svg/gear.svg'), 35px, 35px, $main-green);
-            display: inline-block;
+            @include iconsSd(url('/assets/svg/gear.svg'), 25px, 25px, $main-green);
+            // display: inline-block;
+            // position: absolute;
         }
     }
 }
