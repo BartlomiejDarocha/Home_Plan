@@ -69,18 +69,9 @@
     justify-content: center;
     align-items: center;
     .formWrapper {
-        // 10px 10px 10px 35px
         height: 100%;
         width: 50%;
         display: flex;
         justify-content: center;
-        .formWrapperBefore {
-            position: relative;
-        }
-        .formWrapperBefore::before {
-            content: "";
-            @include iconsSd(url('/assets/svg/gear.svg'), 25px, 25px, $main-green);
-            position: absolute;
-        }
     }
 }

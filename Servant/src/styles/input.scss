@@ -5,6 +5,7 @@
 }
 
 .inputFrontIcon {
+  position: relative;
   .common_input {
     padding: 10px 10px 10px 35px;
   }
@@ -13,4 +14,6 @@
   content: "";
   @include iconsSd(url('/assets/svg/gear.svg'), 25px, 25px, $main-green);
   position: absolute;
+  top: 5px;
+  left: 5px;
 }
