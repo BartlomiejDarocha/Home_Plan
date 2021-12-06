@@ -61,7 +61,6 @@
     mask-image: url('/assets/svg/user.svg');
 }
 
-
 .testInput {
     height: 200px;
     width: 100%;
@@ -72,35 +71,12 @@
         height: 100%;
         display: flex;
         justify-content: center;
-        .testInputIcon::before {
-            content: "";
-            @include iconsSd(url('/assets/svg/user.svg'), 25px, 25px, $background-second);
-            position: absolute;
-            top: 5px;
-            left: 5px;
-        }
-    }
-}
-
-.testInput {
-    height: 200px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .formWrapper {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        .testForm {
+        .automaticIconbeffore {
             @include iconBeforeInputPadding(25px)
         }
-        .testInputIcon::before {
-            content: "";
+        .automaticIconbeffore::before {
             @include iconsSd(url('/assets/svg/user.svg'), 25px, 25px, $background-second);
-            position: absolute;
-            top: 5px;
-            left: 5px;
+            @include iconBeforeInputPosition(25px);
         }
     }
 }
