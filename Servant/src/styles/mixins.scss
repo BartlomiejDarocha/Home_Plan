@@ -19,33 +19,10 @@
   background-repeat: no-repeat;
 }
 
-@mixin inputFrontIcon($url, $width: 25px, $height: 25px) {
-  position: relative;
-}
-
 // INPUTS
-@mixin inputMixin() {
-  outline: none;
-  max-height: 2.2rem;
-  background: $blackInput;
-  color: $font-main-highlights;
-  font-weight: 500;
-  padding: 0.625rem;
-  border: solid $font-main-highlights 1px;
-  border-radius: 4px;
-  font-size: 1rem;
-  &:focus-visible {
-    border: solid $main-green 1px;
-  }
-  &:disabled {
-    border: solid $disabled-border 1px;
-    background: $background-disabled;
-  }
-}
-
 @mixin iconBeforeInputPadding($iconSize) {
   position: relative;
   .common_input {
-    padding: calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 140);
+    padding: calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 1.4);
   }
 }
