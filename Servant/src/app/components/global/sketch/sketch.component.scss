@@ -70,10 +70,33 @@
     align-items: center;
     .formWrapper {
         height: 100%;
-        width: 50%;
         display: flex;
         justify-content: center;
         .testInputIcon::before {
+            content: "";
+            @include iconsSd(url('/assets/svg/user.svg'), 25px, 25px, $background-second);
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+    }
+}
+
+.testInput {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .formWrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        .testForm {
+            @include iconBeforeInputPadding(25px)
+        }
+        .testInputIcon::before {
+            content: "";
             @include iconsSd(url('/assets/svg/user.svg'), 25px, 25px, $background-second);
             position: absolute;
             top: 5px;

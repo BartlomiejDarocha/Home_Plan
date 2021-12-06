@@ -42,3 +42,10 @@
     background: $background-disabled;
   }
 }
+
+@mixin iconBeforeInputPadding($iconSize) {
+  position: relative;
+  .common_input {
+    padding: calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 140);
+  }
+}
