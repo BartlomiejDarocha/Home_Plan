@@ -23,6 +23,7 @@
 @mixin iconBeforeInputPadding($iconSize) {
   position: relative;
   .common_input {
+    max-height: inherit;
     padding: calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 1.4);
   }
 }
@@ -30,6 +31,6 @@
 @mixin iconBeforeInputPosition($iconSize) {
   content: '';
   position: absolute;
-  top: calc(#{$iconSize} * 0.2);
-  left: calc(#{$iconSize} * 0.2);
+  top: calc(#{$iconSize} * 0.3);
+  left: calc(#{$iconSize} * 0.3);
 }

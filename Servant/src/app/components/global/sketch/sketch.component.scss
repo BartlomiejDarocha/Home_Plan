@@ -19,13 +19,6 @@
   align-content: center;
   padding: 50px;
 }
-// .testInput {
-//     height: 200px;
-//     width: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
 .textColorBox {
     height: 500px;
     width: 100%;
@@ -72,11 +65,18 @@
         display: flex;
         justify-content: center;
         .automaticIconbeffore {
-            @include iconBeforeInputPadding(25px)
+            @include iconBeforeInputPadding(25px);
         }
         .automaticIconbeffore::before {
             @include iconsSd(url('/assets/svg/user.svg'), 25px, 25px, $background-second);
             @include iconBeforeInputPosition(25px);
+        }
+        .automaticIconBIgbeffore {
+            @include iconBeforeInputPadding(45px);
+        }
+        .automaticIconBIgbeffore::before {
+            @include iconsSd(url('/assets/svg/fingerprint-solid.svg'), 45px, 45px, $main-green);
+            @include iconBeforeInputPosition(45px);
         }
     }
 }
