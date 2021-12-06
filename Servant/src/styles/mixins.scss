@@ -20,17 +20,21 @@
 }
 
 // INPUTS
-@mixin iconBeforeInputPadding($iconSize) {
+@mixin iconBeforeInputPadding($iconSize, $heightInherit:0) {
   position: relative;
   .common_input {
-    max-height: inherit;
     padding: calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 1.4);
+    @if $heightInherit == 1 {
+      max-height: inherit;
+    } @else {
+      max-height: 2.2rem;
+    }
   }
 }
 
-@mixin iconBeforeInputPosition($iconSize) {
+@mixin iconBeforeInputPosition($iconSize, $positonValue) {
   content: '';
   position: absolute;
-  top: calc(#{$iconSize} * 0.3);
-  left: calc(#{$iconSize} * 0.3);
+  top: calc(#{$iconSize} * #{$positonValue});
+  left: calc(#{$iconSize} * #{$positonValue});
 }

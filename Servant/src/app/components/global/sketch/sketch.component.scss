@@ -68,15 +68,15 @@
             @include iconBeforeInputPadding(25px);
         }
         .automaticIconbeffore::before {
-            @include iconsSd(url('/assets/svg/user.svg'), 25px, 25px, $background-second);
-            @include iconBeforeInputPosition(25px);
+            @include iconsSd(url('/assets/svg/user.svg'), 30px, 30px, $main-green);
+            @include iconBeforeInputPosition(25px, 0.11);
         }
         .automaticIconBIgbeffore {
-            @include iconBeforeInputPadding(45px);
+            @include iconBeforeInputPadding(60px, 1);
         }
         .automaticIconBIgbeffore::before {
-            @include iconsSd(url('/assets/svg/fingerprint-solid.svg'), 45px, 45px, $main-green);
-            @include iconBeforeInputPosition(45px);
+            @include iconsSd(url('/assets/svg/fingerprint-solid.svg'), 60px, 60px, $main-green);
+            @include iconBeforeInputPosition(60px, 0.1);
         }
     }
 }
