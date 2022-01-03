@@ -24,6 +24,12 @@ export class ApiService {
     }
   } 
 
+  private dataToSend(data): string {
+    const body = new URLSearchParams;
+    this.dataToSendConvert(data, body);
+    return body.toString();
+  }
+
   public get(url: string): Observable<any> {
     return this.httpClient.get(url);
   }
