@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { URLSearchParams } from 'url';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,20 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
+
+  private dataToSendConvert(data: any, body: URLSearchParams, name = ''): void {
+    for (const key in data) {
+      if (data[key] instanceof Array || data[key] instanceof Object) {
+        this.dataToSendConvert(
+          data[key],
+          body,
+          name.length ? `${name}[${key}]`: `${key}`
+        )
+      } else {
+        body.append(name.length ? `${name}[${key}]`: `${key}`, data[key]);
+      }
+    }
+  } 
 
   public get(url: string): Observable<any> {
     return this.httpClient.get(url);
