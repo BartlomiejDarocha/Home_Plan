@@ -17,6 +17,7 @@ export class InterceptorService implements HttpInterceptor {
     this.loaderService.showLoader();
     const token: string = localStorage.getItem('token');
     // dodać token gdy już zrobię logowanie oraz Serwice do localStore
+    console.log(request, 'request');
     request = request.clone({ headers: this.headers });
     // if (token) {
     if (true) {

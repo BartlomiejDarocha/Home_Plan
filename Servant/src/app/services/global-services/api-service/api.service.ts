@@ -3,7 +3,11 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { URLSearchParams } from 'url';
 
-// class 
+export class UsageHttpParams extends HttpParams {
+  constructor(public noNoader: boolean) {
+    super();
+  }
+} 
 
 @Injectable({
   providedIn: 'root'
@@ -36,8 +40,8 @@ export class ApiService {
     return this.httpClient.get(url, {params: options.params});
   }
 
-  public getNotLoader(url: string, options = {changeApi: null, params: {}}): Observable<any> {
-    return this.httpClient.get(url, {params: options.params})
+  public getNotLoader(url: string, options = {changeApi: null }): Observable<any> {
+    return this.httpClient.get(url, { params: new UsageHttpParams(true)})
   }
 
   public post(url, body: any, options = {changeApi: null, params: {}}): Observable<any> {
