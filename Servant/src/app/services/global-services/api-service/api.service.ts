@@ -32,11 +32,11 @@ export class ApiService {
     return body.toString();
   }
 
-  public get(url: string, options = { changeApi: null, params: {}}): Observable<any> {
+  public get(url: string, options = {changeApi: null, params: {}}): Observable<any> {
     return this.httpClient.get(url, {params: options.params});
   }
 
-  public getNotLoader(url: string, options = { changeApi: null, params: {}}): Observable<any> {
+  public getNotLoader(url: string, options = {changeApi: null, params: {}}): Observable<any> {
     return this.httpClient.get(url, {params: options.params})
   }
 
@@ -45,13 +45,13 @@ export class ApiService {
     return this.httpClient.post(url, this.dataToSend(body), {params: options.params});
   }
 
-  public put(url, body: any): Observable<any> {
+  public put(url, body: any, options = {changeApi: null, params: {}}): Observable<any> {
     // Ustalić przy budowaniu servera jakie dane będę wysyłać i odpowiednio je obrobić przed wysyłką na server 
-    return this.httpClient.put(url, this.dataToSend(body));
+    return this.httpClient.put(url, this.dataToSend(body), {params: options.params});
   }
 
-  public delete(url: string): Observable<any> {
-    return this,this.httpClient.delete(url);
+  public delete(url: string, options = {changeApi: null, params: {}}): Observable<any> {
+    return this,this.httpClient.delete(url, {params: options.params});
   }
 
 }
