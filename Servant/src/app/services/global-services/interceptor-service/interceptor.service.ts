@@ -14,10 +14,13 @@ export class InterceptorService implements HttpInterceptor {
   constructor(private loaderService: LoaderService) { }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    this.loaderService.showLoader();
+    console.log(request, 'request');
+    
+    if (!request.params['noNoader']) {
+      this.loaderService.showLoader();
+    }
     const token: string = localStorage.getItem('token');
     // dodać token gdy już zrobię logowanie oraz Serwice do localStore
-    console.log(request, 'request');
     request = request.clone({ headers: this.headers });
     // if (token) {
     if (false) {
