@@ -20,7 +20,7 @@ export class InterceptorService implements HttpInterceptor {
     console.log(request, 'request');
     request = request.clone({ headers: this.headers });
     // if (token) {
-    if (true) {
+    if (false) {
       // request = request.clone({headers: request.headers.set('Authorization', 'test' + token )});
       request = request.clone({headers: request.headers.set('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pbHNvbkBlbWFpbC5jb20iLCJwYXNzd29yZCI6Im5pbHNvbiIsImlhdCI6MTYyMjc1MDA2NiwiZXhwIjoxNjIyNzUzNjY2fQ.nEni9LFiksZ68M39sVNrz8TQ_gAu3qjj5mgXGl81hqo' )});
     }

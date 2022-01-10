@@ -24,6 +24,17 @@ export class SketchComponent {
       this.loaderService.hideLoader();
     }, 2000);
   }
+  public getBoredApi(): void {
+    this.apiService.get(`https://www.boredapi.com/api/activity`).subscribe((dataBored: any) => {
+      console.log(dataBored, 'dataBored');
+    });
+  }
+
+  public getNoLoaderBoredApi(): void {
+    this.apiService.getNotLoader(`https://www.boredapi.com/api/activity`).subscribe((dataBored: any) => {
+      console.log(dataBored, 'dataBored NoLoader');
+    });
+  }
 
   public setDisabled(): void {
     this.disabledButton = !this.disabledButton;
