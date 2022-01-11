@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ConfirmAlertInterFace } from '../interFaces';
+import { ConfirmAlertInterFace } from '../models';
 
 @Component({
   selector: 'app-confirm-alert',

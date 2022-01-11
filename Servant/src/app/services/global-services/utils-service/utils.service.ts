@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmAlertComponent } from 'src/app/components/global/utils/confirm-alert/confirm-alert.component';
-import { ConfirmAlertInterFace, StandardAlertInterFace } from 'src/app/components/global/utils/interFaces';
+import { ConfirmAlertInterFace, StandardAlertInterFace } from 'src/app/components/global/utils/models';
 import { StandardAlertComponent } from 'src/app/components/global/utils/standard-alert/standard-alert.component';
 
 @Injectable({
