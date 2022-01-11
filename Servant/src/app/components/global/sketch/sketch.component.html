@@ -19,7 +19,23 @@
       <button class="classic_button" mat-stroked-button (click)="setDisabled()">set Disabled</button>
     </div>
     <div class="padding">
-      <button class="classic_button" [class.disabled]="disabledButton" [disabled]="disabledButton" mat-stroked-button color="">Submit</button>
+      <button class="classic_button" [class.disabled]="disabledButton" [disabled]="disabledButton" mat-stroked-button>Submit</button>
+    </div>
+  </div>
+
+  <div class="testInput">
+    <div class="formWrapper">
+      <div class="automaticIconbeffore">
+        <input [disabled]="disabledButton" class="common_input" placeholder="Ulubione danie2">
+      </div>
+    </div>
+  </div>
+
+  <div class="testInput">
+    <div class="formWrapper">
+      <div class="automaticIconBIgbeffore">
+        <input [disabled]="disabledButton" class="common_input" placeholder="Ulubione danie2">
+      </div>
     </div>
   </div>
 

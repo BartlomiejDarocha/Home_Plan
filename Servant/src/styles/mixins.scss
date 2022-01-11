@@ -1,3 +1,4 @@
+// ICONS
 @mixin iconsSd($url, $width: 25px, $height: 25px, $color) {
   display: block;
   width: $width;
@@ -16,4 +17,24 @@
   background-image: $url;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+// INPUTS
+@mixin iconBeforeInputPadding($iconSize, $heightInherit:0) {
+  position: relative;
+  .common_input {
+    padding: calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 1.4);
+    @if $heightInherit == 1 {
+      max-height: inherit;
+    } @else {
+      max-height: 2.2rem;
+    }
+  }
+}
+
+@mixin iconBeforeInputPosition($iconSize, $positonValue) {
+  content: '';
+  position: absolute;
+  top: calc(#{$iconSize} * #{$positonValue});
+  left: calc(#{$iconSize} * #{$positonValue});
 }

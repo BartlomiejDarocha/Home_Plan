@@ -11,7 +11,7 @@
   min-width: 10rem;
   border: 2.5px solid currentColor;
   border-color: $main-green;
-  border-radius: 0.8rem;
+  border-radius: 0.3rem;
   background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(93,93,93,1) 51%);
   &:hover:not(.disabled) {
     border-color: $main-green-active;

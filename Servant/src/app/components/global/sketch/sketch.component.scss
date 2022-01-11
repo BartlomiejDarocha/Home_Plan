@@ -53,3 +53,30 @@
     -webkit-mask-image: url('/assets/svg/user.svg');
     mask-image: url('/assets/svg/user.svg');
 }
+
+.testInput {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .formWrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        .automaticIconbeffore {
+            @include iconBeforeInputPadding(25px);
+        }
+        .automaticIconbeffore::before {
+            @include iconsSd(url('/assets/svg/user.svg'), 30px, 30px, $main-green);
+            @include iconBeforeInputPosition(25px, 0.11);
+        }
+        .automaticIconBIgbeffore {
+            @include iconBeforeInputPadding(60px, 1);
+        }
+        .automaticIconBIgbeffore::before {
+            @include iconsSd(url('/assets/svg/fingerprint-solid.svg'), 60px, 60px, $main-green);
+            @include iconBeforeInputPosition(60px, 0.1);
+        }
+    }
+}
