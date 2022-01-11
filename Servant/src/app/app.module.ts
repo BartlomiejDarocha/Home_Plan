@@ -10,11 +10,20 @@ import { UtilsService } from './services/global-services/utils-service/utils.ser
 import { AngularMaterialModule } from './angular-material.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './services/global-services/interceptor-service/interceptor.service';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FooterComponent } from './components/global/footer/footer.component';
+import { HeaderComponent } from './components/global/header/header.component';
+import { LoaderGlobalComponent } from './components/global/loader-global/loader-global.component';
+import { LogoSpinnerComponent } from './components/global/logo-spinner/logo-spinner.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    LogoSpinnerComponent,
+    LoaderGlobalComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +31,8 @@ import { InterceptorService } from './services/global-services/interceptor-servi
     BrowserAnimationsModule,
     GlobalComponentModuleModule,
     AngularMaterialModule,
+    MatDialogModule,
+    MatButtonModule,
     HttpClientModule
   ],
   providers: [

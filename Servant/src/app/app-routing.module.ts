@@ -13,6 +13,9 @@ const routes: Routes = [
     component: SketchComponent,
   },
   {
+    path: 'login',
+  },
+  {
     path: '', redirectTo: 'home' , pathMatch: 'full'
   },
   {
