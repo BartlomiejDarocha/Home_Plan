@@ -1,29 +1,45 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { CommonModule } from '@angular/common';
 import { LoaderGlobalComponent } from './loader-global/loader-global.component';
-import { SketchComponent } from './sketch/sketch.component';
-import { ConfirmAlertComponent } from './utils/confirm-alert/confirm-alert.component';
 import { StandardAlertComponent } from './utils/standard-alert/standard-alert.component';
+import { ConfirmAlertComponent } from './utils/confirm-alert/confirm-alert.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { SketchComponent } from './sketch/sketch.component';
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { LogoSpinnerComponent } from './logo-spinner/logo-spinner.component';
+
+
+
 
 @NgModule({
   declarations: [
+    LoaderGlobalComponent,
     StandardAlertComponent,
     ConfirmAlertComponent,
     HomeComponent,
+    HeaderComponent,
     SketchComponent,
+    FooterComponent,
+    LogoSpinnerComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   exports: [
-    HomeComponent,
     LoaderGlobalComponent,
     StandardAlertComponent,
     ConfirmAlertComponent,
     SketchComponent,
+    HeaderComponent,
+    FooterComponent,
+    LogoSpinnerComponent
   ]
 })
 export class GlobalComponentModuleModule { }
