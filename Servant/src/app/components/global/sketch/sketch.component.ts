@@ -31,7 +31,7 @@ export class SketchComponent {
   }
 
   public getNoLoaderBoredApi(): void {
-    this.apiService.getNotLoader(`https://www.boredapi.com/api/activity`, {changeApi: null, params: {key: 'TestKey'} }).subscribe((dataBored: any) => {
+    this.apiService.getNotLoader(`https://www.boredapi.com/api/activity`).subscribe((dataBored: any) => {
       console.log(dataBored, 'dataBored NoLoader');
     });
   }

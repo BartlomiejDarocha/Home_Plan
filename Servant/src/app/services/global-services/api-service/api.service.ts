@@ -40,13 +40,8 @@ export class ApiService {
     return this.httpClient.get(url, {params: options.params});
   }
 
-  public getNotLoader(url: string, options = {changeApi: null, params: {}}): Observable<any> {
-    const noLoaderParams = new UsageHttpParams(true);
-    noLoaderParams.append('key', 'TestKey')
-    console.log(noLoaderParams, 'noLoaderParams');
-    
-    return this.httpClient.get(url, {params: noLoaderParams})
-    // .appendAll(options.params)
+  public getNotLoader(url: string, options = {changeApi: null}): Observable<any> {
+    return this.httpClient.get(url,{params: new UsageHttpParams(true)});
   }
 
   public post(url, body: any, options = {changeApi: null, params: {}}): Observable<any> {
