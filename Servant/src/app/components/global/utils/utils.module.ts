@@ -5,8 +5,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { ConfirmAlertComponent } from './confirm-alert/confirm-alert.component';
 import { StandardAlertComponent } from './standard-alert/standard-alert.component';
 
-
-
 @NgModule({
   declarations: [
     StandardAlertComponent,
