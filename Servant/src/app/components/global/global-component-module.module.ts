@@ -1,25 +1,18 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoaderGlobalComponent } from './loader-global/loader-global.component';
-import { StandardAlertComponent } from './utils/standard-alert/standard-alert.component';
-import { ConfirmAlertComponent } from './utils/confirm-alert/confirm-alert.component';
-import { MatDialogModule } from '@angular/material/dialog';
+import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { SketchComponent } from './sketch/sketch.component';
+import { MatDialogModule } from '@angular/material/dialog';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
+import { LoaderGlobalComponent } from './loader-global/loader-global.component';
 import { LogoSpinnerComponent } from './logo-spinner/logo-spinner.component';
-
-
-
+import { SketchComponent } from './sketch/sketch.component';
 
 @NgModule({
   declarations: [
-    LoaderGlobalComponent,
-    StandardAlertComponent,
-    ConfirmAlertComponent,
+    LoaderGlobalComponent,    
     HomeComponent,
     HeaderComponent,
     SketchComponent,
@@ -34,8 +27,6 @@ import { LogoSpinnerComponent } from './logo-spinner/logo-spinner.component';
   ],
   exports: [
     LoaderGlobalComponent,
-    StandardAlertComponent,
-    ConfirmAlertComponent,
     SketchComponent,
     HeaderComponent,
     FooterComponent,
