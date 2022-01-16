@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GlobalComponentModuleModule } from './components/global/global-component-module.module';
 import { UtilsModule } from './components/global/utils/utils.module';
+import { SharedModule } from './components/shared/shared.module';
 import { InterceptorService } from './services/global-services/interceptor-service/interceptor.service';
 import { UtilsService } from './services/global-services/utils-service/utils.service';
 
@@ -19,6 +20,7 @@ import { UtilsService } from './services/global-services/utils-service/utils.ser
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     BrowserAnimationsModule,
     UtilsModule,
     GlobalComponentModuleModule,
