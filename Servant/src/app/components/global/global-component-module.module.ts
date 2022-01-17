@@ -19,7 +19,6 @@ import { SketchComponent } from './sketch/sketch.component';
     LogoSpinnerComponent,
   ],
   imports: [
-    CommonModule,
     SharedModule,
     RouterModule,
   ],
