@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/global/home/home.component';
 import { SketchComponent } from './components/global/sketch/sketch.component';
+import { LoginComponent } from './components/user-handler-components/login/login.component';
+import { UserHandlerRoutingModule } from './components/user-handler-components/user-handler-routing.module';
 
 const routes: Routes = [
   {
@@ -21,7 +23,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    UserHandlerRoutingModule,
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

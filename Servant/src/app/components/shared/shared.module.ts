@@ -14,6 +14,10 @@ import { FooterComponent } from '../footer/footer.component';
     MatDialogModule,
     MatButtonModule
   ],
-  exports: []
+  exports: [
+    CommonModule,
+    MatDialogModule,
+    MatButtonModule
+  ]
 })
 export class SharedModule { }

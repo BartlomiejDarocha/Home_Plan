@@ -1,10 +1,5 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
 import { RouterModule } from '@angular/router';
-import { FooterComponent } from '../footer/footer.component';
-import { HeaderComponent } from '../header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { LoaderGlobalComponent } from './loader-global/loader-global.component';
