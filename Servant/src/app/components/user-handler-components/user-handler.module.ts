@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { UserHandlerRoutingModule } from './user-handler-routing.module';
+import { FooterModule } from '../footer/footer.module';
+import { HeaderModule } from '../header/header.module';
+import { SharedModule } from '../shared/shared.module';
+import { AccountRecoveryComponent } from './account-recovery/account-recovery.component';
 import { LoginComponent } from './login/login.component';
 import { RegisteryComponent } from './registery/registery.component';
-import { AccountRecoveryComponent } from './account-recovery/account-recovery.component';
-import { SharedModule } from '../shared/shared.module';
-import { HeaderModule } from '../header/header.module';
-import { FooterModule } from '../footer/footer.module';
+import { UserHandlerRoutingModule } from './user-handler-routing.module';
 
 
 
@@ -21,6 +20,11 @@ import { FooterModule } from '../footer/footer.module';
     HeaderModule,
     FooterModule,
     UserHandlerRoutingModule,
+  ],
+  exports: [
+    LoginComponent,
+    RegisteryComponent,
+    AccountRecoveryComponent
   ]
 })
 export class UserHandlerModule { }

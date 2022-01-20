@@ -10,6 +10,7 @@ import { GlobalComponentModuleModule } from './components/global/global-componen
 import { UtilsModule } from './components/global/utils/utils.module';
 import { HeaderModule } from './components/header/header.module';
 import { SharedModule } from './components/shared/shared.module';
+import { UserHandlerModule } from './components/user-handler-components/user-handler.module';
 import { InterceptorService } from './services/global-services/interceptor-service/interceptor.service';
 import { UtilsService } from './services/global-services/utils-service/utils.service';
 
@@ -27,6 +28,7 @@ import { UtilsService } from './services/global-services/utils-service/utils.ser
     BrowserAnimationsModule,
     UtilsModule,
     GlobalComponentModuleModule,
+    UserHandlerModule,
     AngularMaterialModule,
     HttpClientModule
   ],
