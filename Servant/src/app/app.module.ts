@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthorizationModule } from './components/authorization/authorization.module';
 import { FooterModule } from './components/footer/footer.module';
 import { GlobalComponentModuleModule } from './components/global/global-component-module.module';
 import { UtilsModule } from './components/global/utils/utils.module';
@@ -27,7 +26,6 @@ import { UtilsService } from './services/global-services/utils-service/utils.ser
     BrowserAnimationsModule,
     UtilsModule,
     GlobalComponentModuleModule,
-    AuthorizationModule,
     AngularMaterialModule,
     HttpClientModule
   ],

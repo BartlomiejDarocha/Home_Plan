@@ -14,6 +14,10 @@ const routes: Routes = [
     component: SketchComponent,
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./components/authorization/authorization.module').then(m => m.AuthorizationModule)
+  },
+  {
     path: '', redirectTo: 'home' , pathMatch: 'full'
   },
   {
@@ -23,7 +27,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    AuthorizationRoutingModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
