@@ -5,7 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { AccountRecoveryComponent } from './account-recovery/account-recovery.component';
 import { LoginComponent } from './login/login.component';
 import { RegisteryComponent } from './registery/registery.component';
-import { UserHandlerRoutingModule } from './user-handler-routing.module';
+import { UserHandlerRoutingModule } from './authorization-routing.module';
 
 
 
@@ -27,4 +27,4 @@ import { UserHandlerRoutingModule } from './user-handler-routing.module';
     AccountRecoveryComponent
   ]
 })
-export class UserHandlerModule { }
+export class AuthorizationModule { }
