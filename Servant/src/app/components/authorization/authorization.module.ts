@@ -6,6 +6,7 @@ import { AccountRecoveryComponent } from './account-recovery/account-recovery.co
 import { LoginComponent } from './login/login.component';
 import { RegisteryComponent } from './registery/registery.component';
 import { AuthorizationRoutingModule } from './authorization-routing.module';
+import { AuthorizationComponent } from './authorization.component';
 
 
 
@@ -13,7 +14,8 @@ import { AuthorizationRoutingModule } from './authorization-routing.module';
   declarations: [
     LoginComponent,
     RegisteryComponent,
-    AccountRecoveryComponent
+    AccountRecoveryComponent,
+    AuthorizationComponent
   ],
   imports: [
     SharedModule,
