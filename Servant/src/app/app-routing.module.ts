@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthorizationRoutingModule } from './components/authorization/authorization-routing.module';
 import { HomeComponent } from './components/global/home/home.component';
 import { SketchComponent } from './components/global/sketch/sketch.component';
-import { LoginComponent } from './components/user-handler-components/login/login.component';
-import { UserHandlerRoutingModule } from './components/user-handler-components/user-handler-routing.module';
 
 const routes: Routes = [
   {
@@ -24,7 +23,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    UserHandlerRoutingModule,
+    AuthorizationRoutingModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
