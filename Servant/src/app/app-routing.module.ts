@@ -4,11 +4,13 @@ import { AuthorizationRoutingModule } from './components/authorization/authoriza
 import { HomeComponent } from './components/global/home/home.component';
 import { SketchComponent } from './components/global/sketch/sketch.component';
 import { AuthGuard } from './guards/auth-guard/auth.guard';
+import { LoggedUserGuard } from './guards/logged-user-guard/logged-user.guard';
 
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'sketch',
@@ -17,13 +19,13 @@ const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () => import('./components/authorization/authorization.module').then(m => m.AuthorizationModule),
-    canActivate: [AuthGuard]
+    canActivate: [LoggedUserGuard]
   },
   {
     path: '', redirectTo: 'home' , pathMatch: 'full'
   },
   {
-    path: '**', redirectTo: '/' , pathMatch: 'full'
+    path: '**', redirectTo: 'home' , pathMatch: 'full'
   }
 ];
 
