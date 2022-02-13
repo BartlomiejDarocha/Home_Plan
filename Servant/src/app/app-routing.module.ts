@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthorizationRoutingModule } from './components/authorization/authorization-routing.module';
 import { HomeComponent } from './components/global/home/home.component';
 import { SketchComponent } from './components/global/sketch/sketch.component';
+import { AuthGuard } from './guards/auth-guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: () => import('./components/authorization/authorization.module').then(m => m.AuthorizationModule)
+    loadChildren: () => import('./components/authorization/authorization.module').then(m => m.AuthorizationModule),
+    canActivate: [AuthGuard]
   },
   {
     path: '', redirectTo: 'home' , pathMatch: 'full'
