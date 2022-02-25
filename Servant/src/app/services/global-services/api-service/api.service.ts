@@ -40,6 +40,10 @@ export class ApiService {
     return this.httpClient.get(url, {params: options.params});
   }
 
+  public getWithHttpParams(url, params: any): Observable<any> {
+    return this.httpClient.get(url, { params });
+  }
+
   public getNotLoader(url: string, options = {changeApi: null}): Observable<any> {
     return this.httpClient.get(url,{params: new UsageHttpParams(true)});
   }

@@ -77,6 +77,15 @@ export class SketchComponent {
       // narzie bez catch ale to później
     });
   }
+  public filtersTest = {
+    name: 'NameTest',
+    surName: 'SurNameTest'
+  } 
+  public getPostByfilters2(filters: any): void {
+    this.apiService.getWithHttpParams('https://www.boredapi.com/api/activity', filters).subscribe((data: any) => {
+      console.log('data Bored Api with filters', data);
+    });
+  }
 
   public getPostByFiltersDesc(filter: string): void {
     this.apiService.get(`http://localhost:3000/posts?_sort=${filter}&_order=desc`).subscribe((data: any) => {
