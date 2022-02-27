@@ -4,12 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  private user: any = {
-    userId: 1,
-    fName: 'TestFirstName',
-    lName: 'TestLastName'
-  }
-  // private user: any = null;
+  // private user: any = {
+  //   userId: 1,
+  //   fName: 'TestFirstName',
+  //   lName: 'TestLastName'
+  // }
+  private user: any = null;
 
   constructor() { }
 

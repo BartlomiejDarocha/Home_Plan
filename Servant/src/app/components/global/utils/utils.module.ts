@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatButtonModule } from '@angular/material/button';
+import { SharedModule } from '../../shared/shared.module';
 import { ConfirmAlertComponent } from './confirm-alert/confirm-alert.component';
 import { StandardAlertComponent } from './standard-alert/standard-alert.component';
 
@@ -11,9 +10,8 @@ import { StandardAlertComponent } from './standard-alert/standard-alert.componen
     ConfirmAlertComponent,
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     MatDialogModule,
-    MatButtonModule
   ],
   exports: [
     StandardAlertComponent,
