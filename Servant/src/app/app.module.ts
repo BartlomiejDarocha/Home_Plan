@@ -2,7 +2,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularMaterialModule } from './angular-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GlobalComponentModuleModule } from './components/global/global-component-module.module';
@@ -22,7 +21,6 @@ import { UtilsService } from './services/global-services/utils-service/utils.ser
     BrowserAnimationsModule,
     UtilsModule,
     GlobalComponentModuleModule,
-    AngularMaterialModule,
     HttpClientModule
   ],
   providers: [
