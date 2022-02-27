@@ -12,7 +12,7 @@ export class LoggedUserGuard implements CanActivate {
   ) {}
   canActivate(): boolean {
     if (this.userService.getUser) {
-      this.router.navigate(['/home'], { replaceUrl: true });
+      this.router.navigate(['/plan'], { replaceUrl: true });
       return false;
     };
     return true;

@@ -3,13 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthorizationRoutingModule } from './components/authorization/authorization-routing.module';
 import { HomeComponent } from './components/global/home/home.component';
 import { SketchComponent } from './components/global/sketch/sketch.component';
+import { PlanComponent } from './components/plan/plan.component';
 import { AuthGuard } from './guards/auth-guard/auth.guard';
 import { LoggedUserGuard } from './guards/logged-user-guard/logged-user.guard';
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'plan',
+    loadChildren: () => import('./components/plan/plan.module').then(m => m.PlanModule),
     canActivate: [AuthGuard]
   },
   {
@@ -22,10 +23,10 @@ const routes: Routes = [
     canActivate: [LoggedUserGuard]
   },
   {
-    path: '', redirectTo: 'home' , pathMatch: 'full'
+    path: '', redirectTo: 'plan' , pathMatch: 'full'
   },
   {
-    path: '**', redirectTo: 'home' , pathMatch: 'full'
+    path: '**', redirectTo: 'plan' , pathMatch: 'full'
   }
 ];
 
