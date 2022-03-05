@@ -1,6 +1,12 @@
 @import '/src/styles/mixins.scss';
+@import '/src/styles/colors.scss';
 
 .login_wrapper {
   @include flexHorizontalCenter;
   margin: 15% auto;
+  .login_form {
+    border: 2.5px solid red;
+    border-radius: 30%;
+    padding: 10px 20px
+  }
 }
