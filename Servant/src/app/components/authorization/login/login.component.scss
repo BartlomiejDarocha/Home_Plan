@@ -1,0 +1,6 @@
+@import '/src/styles/mixins.scss';
+
+.login_wrapper {
+  @include flexHorizontalCenter;
+  margin: 15% auto;
+}

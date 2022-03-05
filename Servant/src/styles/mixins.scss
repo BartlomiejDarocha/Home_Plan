@@ -38,3 +38,16 @@
   top: calc(#{$iconSize} * #{$positonValue});
   left: calc(#{$iconSize} * #{$positonValue});
 }
+
+// flex
+@mixin flexFullCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+@mixin flexHorizontalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
