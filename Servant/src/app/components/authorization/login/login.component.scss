@@ -1,12 +1,59 @@
 @import '/src/styles/mixins.scss';
 @import '/src/styles/colors.scss';
+@import '/src/styles/input.scss';
+@import "/src/styles/common-imports.scss";
 
 .login_wrapper {
   @include flexHorizontalCenter;
-  margin: 15% auto;
+  margin: 10% auto;
   .login_form {
-    border: 2.5px solid red;
-    border-radius: 30%;
-    padding: 10px 20px
+    @include flexFullCenter;
+    border: 2.5px solid $main-green;
+    border-radius: 15%;
+    height: 250px;
+    padding: 20px;
+    background-color: $background-second;
+    form {
+      #login_Input, #password_Input {
+        margin-bottom: 15px;
+      }
+      #login_Input {
+        @include iconBeforeInputPadding(25px);
+      }
+      #login_Input::before {
+        @include iconsSd(url('/assets/svg/user.svg'), 30px, 30px, $main-green);
+        @include iconBeforeInputPosition(25px, 0.11);
+      }
+      #password_Input {
+        @include iconBeforeInputPadding(25px);
+      }
+      #password_Input::before {
+        @include iconsSd(url('/assets/svg/key-solid.svg'), 25px, 25px, $main-green);
+        @include iconBeforeInputPosition(30px, 0.18);
+      }
+    }
   }
 }
+
+.login_icon {
+  @include flexHorizontalCenter;
+}
+
+.ic-login {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-color: $main-green;
+  -webkit-mask-image: url('/assets/svg/users-solid.svg');
+  mask-image: url('/assets/svg/users-solid.svg');
+  mask-repeat: no-repeat;
+}
+
+.login_button {
+  @include flexHorizontalCenter;
+  // padding-bottom: 25px;
+  button {
+    width: 100%;
+  }
+}
+
