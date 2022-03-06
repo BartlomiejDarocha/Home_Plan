@@ -5,12 +5,12 @@
 
 .login_wrapper {
   @include flexHorizontalCenter;
-  margin: 10% auto;
+  margin: 5% auto;
   .login_form {
     @include flexFullCenter;
     border: 2.5px solid $main-green;
     border-radius: 15%;
-    height: 250px;
+    height: 350px;
     padding: 20px;
     background-color: $background-second;
     form {
@@ -30,6 +30,18 @@
       #password_Input::before {
         @include iconsSd(url('/assets/svg/key-solid.svg'), 25px, 25px, $main-green);
         @include iconBeforeInputPosition(30px, 0.18);
+      }
+      .form_error {
+        padding-top: 5px;
+        color: $text-two;
+        font-size: 14px;
+      }
+      .login_options {
+        display: flex;
+        margin-bottom: 15px;
+        a {
+          padding-left: 10px;
+        }
       }
     }
   }
