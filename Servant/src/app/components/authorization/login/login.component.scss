@@ -26,10 +26,15 @@
       }
       #password_Input {
         @include iconBeforeInputPadding(25px);
+        max-width: 215.333px;
+        padding-right: 30px;
       }
       #password_Input::before {
         @include iconsSd(url('/assets/svg/key-solid.svg'), 25px, 25px, $main-green);
         @include iconBeforeInputPosition(30px, 0.18);
+      }
+      .eye {
+        @include iconsSd(url('/assets/svg/users-solid.svg'), 35px, 35px, $main-green);
       }
       .form_error {
         padding-top: 5px;
