@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisteryComponent } from './registery/registery.component';
 import { AuthorizationRoutingModule } from './authorization-routing.module';
 import { AuthorizationComponent } from './authorization.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,6 +22,8 @@ import { AuthorizationComponent } from './authorization.component';
     SharedModule,
     HeaderModule,
     FooterModule,
+    FormsModule,
+    ReactiveFormsModule,
     AuthorizationRoutingModule
   ],
   exports: [

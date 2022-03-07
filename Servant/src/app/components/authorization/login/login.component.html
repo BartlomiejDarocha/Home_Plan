@@ -1,15 +1,15 @@
 <div class="login_wrapper">
   <div class="login_form">
-    <form>
+    <form #loginForm="ngForm">
       <div class="login_icon">
         <i class="ic-login"></i>
       </div>
       <div id="login_Input">
-        <input class="common_input" placeholder="E-mail">
+        <input [(ngModel)]="loginData.email" class="common_input" placeholder="E-mail">
         <div class="form_error">E-mail jest wymagany</div>
       </div>
       <div id="password_Input">
-        <input class="common_input" placeholder="Hasło">
+        <input [(ngModel)]="loginData.password" class="common_input" placeholder="Hasło">
         <i class="eye"></i>
         <div class="form_error">Hasło jest wymagane</div>
       </div>
