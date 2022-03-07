@@ -4,12 +4,12 @@
       <div class="login_icon">
         <i class="ic-login"></i>
       </div>
-      <div id="login_Input">
-        <input [(ngModel)]="loginData.email" name="email" #email="ngModel" class="common_input" placeholder="E-mail" required>
+      <div id="login_Input" class="relative">
+        <input [(ngModel)]="loginData.email" [class.input_error]="email.hasError('required') && email.touched" name="email" #email="ngModel" class="common_input" placeholder="E-mail" required>
         <div *ngIf="email.hasError('required') && email.touched" class="form_error">E-mail jest wymagany</div>
       </div>
-      <div id="password_Input">
-        <input [(ngModel)]="loginData.password" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
+      <div id="password_Input" class="relative">
+        <input [(ngModel)]="loginData.password" [class.input_error]="password.hasError('required') && password.touched" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
         <i class="eye"></i>
         <div *ngIf="password.hasError('required') && password.touched" class="form_error">Hasło jest wymagane</div>
       </div>

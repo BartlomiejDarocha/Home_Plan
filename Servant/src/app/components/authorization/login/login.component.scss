@@ -15,14 +15,14 @@
     background-color: $background-second;
     form {
       #login_Input, #password_Input {
-        margin-bottom: 15px;
+        margin-bottom: 25px;
       }
       #login_Input {
         @include iconBeforeInputPadding(25px);
       }
       #login_Input::before {
-        @include iconsSd(url('/assets/svg/user.svg'), 30px, 30px, $main-green);
-        @include iconBeforeInputPosition(25px, 0.11);
+        @include iconsSd(url('/assets/svg/user.svg'), 25px, 25px, $main-green);
+        @include iconBeforeInputPosition(25px, 0.18);
       }
       #password_Input {
         @include iconBeforeInputPadding(25px);
@@ -37,7 +37,8 @@
         @include iconsSd(url('/assets/svg/users-solid.svg'), 35px, 35px, $main-green);
       }
       .form_error {
-        padding-top: 5px;
+        position: absolute;
+        padding-top: 3px;
         color: $text-two;
         font-size: 14px;
       }
