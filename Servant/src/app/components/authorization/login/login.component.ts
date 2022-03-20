@@ -17,6 +17,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public changeEye(target: any): void {
+    console.log(target, 'target');
+  }
+
   public login(): void {
     console.log(this.loginData, 'loginData');
   }

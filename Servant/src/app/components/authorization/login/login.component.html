@@ -10,7 +10,11 @@
       </div>
       <div id="password_Input" class="relative">
         <input [(ngModel)]="loginData.password" [class.input_error]="password.hasError('required') && password.touched" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
-        <i class="eye"></i>
+        <div class="eye">
+          <button (click)="changeEye($event)" class="icon_button">
+            <a class="eye_icon"></a>
+          </button>
+        </div>
         <div *ngIf="password.hasError('required') && password.touched" class="form_error">Hasło jest wymagane</div>
       </div>
       <div class="login_options">
