@@ -7,6 +7,7 @@ import { LoginDataModel } from 'src/app/models/login/login.model';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  public showPassword = false;
   public loginData: LoginDataModel = {
     email: '',
     password: ''
@@ -18,7 +19,14 @@ export class LoginComponent implements OnInit {
   }
 
   public changeEye(target: any): void {
-    console.log(target, 'target');
+    console.log(target.target);
+    this.showPassword = !target.target.className.includes('eye_icon');
+    console.log(this.showPassword, 'showPassword');
+    if(this.showPassword) {
+      //zrób to w html i css
+      target.target.classList.add('dupa');
+      target.target.classList.remove('eye_icon');
+    }
   }
 
   public login(): void {

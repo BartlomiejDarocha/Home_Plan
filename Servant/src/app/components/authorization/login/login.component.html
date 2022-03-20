@@ -11,7 +11,7 @@
       <div id="password_Input" class="relative">
         <input [(ngModel)]="loginData.password" [class.input_error]="password.hasError('required') && password.touched" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
         <div class="eye">
-          <button (click)="changeEye($event)" class="icon_button">
+          <button type="button" (click)="changeEye($event)" class="icon_button">
             <a class="eye_icon"></a>
           </button>
         </div>
