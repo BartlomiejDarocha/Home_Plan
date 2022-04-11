@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsValidationDirective } from './forms-validation-directive/forms-validation.directive';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [FormsValidationDirective],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [FormsValidationDirective]
 })
-export class DirectivesModule { }
+export class FormsValidationDirectiveModule { }
