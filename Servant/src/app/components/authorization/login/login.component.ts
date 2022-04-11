@@ -18,15 +18,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public changeEye(target: any): void {
-    console.log(target.target);
-    this.showPassword = !target.target.className.includes('eye_icon');
-    console.log(this.showPassword, 'showPassword');
-    if(this.showPassword) {
-      //zrób to w html i css
-      target.target.classList.add('dupa');
-      target.target.classList.remove('eye_icon');
-    }
+  public changeEye(): void {
+    this.showPassword = !this.showPassword;
   }
 
   public login(): void {

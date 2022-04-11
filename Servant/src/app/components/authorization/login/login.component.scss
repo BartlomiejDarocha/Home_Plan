@@ -42,6 +42,9 @@
         .eye_icon {
           @include iconsSd(url('/assets/svg/eye-regular.svg'), 30px, 30px, $main-green);
         }
+        .eye_cross {
+          @include iconsSd(url('/assets/svg/eye-slash-regular.svg'), 30px, 30px, $main-green);
+        }
       }
       .form_error {
         position: absolute;
