@@ -17,7 +17,8 @@ import { FormsValidationDirectiveModule } from '../directives/directives.module'
   exports: [
     CommonModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsValidationDirectiveModule
   ]
 })
 export class SharedModule { }

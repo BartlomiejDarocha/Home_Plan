@@ -1,6 +1,6 @@
 <div class="login_wrapper">
   <div class="login_form">
-    <form #loginForm="ngForm" (submit)="login()">
+    <form #loginForm="ngForm" formsValidation (submit)="login()">
       <div class="login_icon">
         <i class="ic-login"></i>
       </div>
@@ -26,7 +26,7 @@
         <a href="">Zapomniałeś hasła</a>
       </div>
       <div class="login_button">
-        <button [disabled]="loginForm.invalid" [class.disabled]="loginForm.invalid" class="classic_button" mat-stroked-button>Zaloguj</button>
+        <button class="classic_button" mat-stroked-button>Zaloguj</button>
       </div>
     </form>
   </div>
