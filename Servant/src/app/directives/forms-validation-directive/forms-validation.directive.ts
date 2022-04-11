@@ -6,7 +6,7 @@ import { NgForm } from '@angular/forms';
 })
 export class FormsValidationDirective implements OnInit {
   private formsControl = null;
-  private htmlElements: HTMLFormControlsCollection = null;
+  private inputs: HTMLInputElement[] = null;
 
   constructor(private element: ElementRef, private form: NgForm ) { }
 
@@ -21,7 +21,8 @@ export class FormsValidationDirective implements OnInit {
   }
 
   private getHtmlElements(): void {
-    this.htmlElements = this.element.nativeElement.elements;
-    console.log(this.htmlElements, 'this.htmlElements');
+    const htmlElements = this.element.nativeElement.elements;
+    // this.inputs =
+    console.log(htmlElements,  'this.htmlElements');
   }
 }
