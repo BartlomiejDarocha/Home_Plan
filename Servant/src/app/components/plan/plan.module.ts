@@ -3,7 +3,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { FooterModule } from '../footer/footer.module';
 import { UtilsModule } from '../global/utils/utils.module';
 import { HeaderModule } from '../header/header.module';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 import { PlanRoutingModule } from './plan-routing.module';
 import { PlanComponent } from './plan.component';
 

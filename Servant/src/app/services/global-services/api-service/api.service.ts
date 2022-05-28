@@ -1,7 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { URLSearchParams } from 'url';
 
 export class UsageHttpParams extends HttpParams {
   constructor(public noNoader: boolean) {
