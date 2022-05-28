@@ -32,7 +32,7 @@ speed-measure-plugin*.json
 .history/*
 
 # Angular
-.angular
+.angular/*
 
 # misc
 /.sass-cache
