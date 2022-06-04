@@ -19,3 +19,9 @@
 .input_error {
   border: solid $text-two 1px;
 }
+
+.form_error {
+  padding-top: 2px;
+  color: $text-two;
+  font-size: 14px;
+}

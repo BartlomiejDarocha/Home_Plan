@@ -7,7 +7,6 @@
     @include flexFullCenter;
     border-bottom: 10px solid $main-green;
     border-top: 10px solid $main-green;
-    height: 350px;
     padding: 20px;
     background-color: $background-second;
     form {
@@ -46,10 +45,7 @@
           @include iconsSd(url('/assets/svg/eye-slash-regular.svg'), 30px, 30px, $main-green);
         }
       }
-      .form_error {
-        color: $text-two;
-        font-size: 14px;
-      }
+
       .login_options {
         display: flex;
         margin-bottom: 15px;
