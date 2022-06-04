@@ -7,6 +7,7 @@ import { LoginDataModel } from 'src/app/models/login/login.model';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  public emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/
   public showPassword = false;
   public loginData: LoginDataModel = {
     email: '',
