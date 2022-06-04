@@ -43,7 +43,6 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
   private renderError(element: HTMLInputElement): void {
     const error = this.render.createElement('div');
     const errorText = this.render.createText('E-mail jest wymagany');
-    console.log(error, 'error');
     this.render.addClass(error, 'form_error');
     this.render.appendChild(error, errorText);
     this.render.appendChild(element.parentElement, error);
@@ -64,9 +63,7 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
   private resetErrors(): void {
     const allReadyErrors = this.element.nativeElement.querySelectorAll('.form_error');
     allReadyErrors.forEach((errorElement: any) => {
-      console.log(errorElement, 'errorElement');
       errorElement.remove();
     })
-    console.log(allReadyErrors);
   }
 }
