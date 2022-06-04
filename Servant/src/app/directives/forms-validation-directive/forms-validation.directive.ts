@@ -36,13 +36,15 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
       if(!htmlElements[incorrectInput.name]) {
         return;
       }
-      this.renderError(htmlElements[incorrectInput.name]);
+      for (const key in incorrectInput.errors) {
+        this.renderError(htmlElements[incorrectInput.name], key, incorrectInput.errors[key]['requiredLength']);
+      }
     });
   }
 
-  private renderError(element: HTMLInputElement): void {
+  private renderError(element: HTMLInputElement, errorKey: string, extraInfo?: string): void {
     const error = this.render.createElement('div');
-    const errorText = this.render.createText('E-mail jest wymagany');
+    const errorText = this.render.createText(extraInfo ? `${errorKey} ${extraInfo}` : errorKey);
     this.render.addClass(error, 'form_error');
     this.render.appendChild(error, errorText);
     this.render.appendChild(element.parentElement, error);

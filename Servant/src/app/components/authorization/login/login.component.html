@@ -4,12 +4,11 @@
       <div class="login_icon">
         <i class="ic-login"></i>
       </div>
-      <div id="login_Input" class="relative">
-        <input [(ngModel)]="loginData.email" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required>
+      <div id="login_Input">
+        <input [(ngModel)]="loginData.email" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required minlength="3">
       </div>
-      <div id="password_Input" class="relative">
+      <div id="password_Input">
         <input [(ngModel)]="loginData.password" [type]="showPassword ? 'text' : 'password'" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
-        <!-- [class.input_error]="password.hasError('required') && password.touched" -->
         <div class="eye">
           <button type="button" (click)="changeEye()" class="icon_button">
             <a *ngIf="!showPassword" class="eye_icon"></a>

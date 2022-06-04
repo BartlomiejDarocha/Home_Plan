@@ -12,7 +12,7 @@
     background-color: $background-second;
     form {
       #login_Input, #password_Input {
-        margin-bottom: 25px;
+        padding-bottom: 25px;
         .common_input {
           width: 100%;
         }
@@ -47,8 +47,6 @@
         }
       }
       .form_error {
-        position: absolute;
-        padding-top: 3px;
         color: $text-two;
         font-size: 14px;
       }
