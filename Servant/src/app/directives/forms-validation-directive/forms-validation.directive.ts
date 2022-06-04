@@ -7,17 +7,16 @@ import { Subscription } from 'rxjs';
 })
 export class FormsValidationDirective implements OnInit, OnDestroy {
   private subs: Subscription[] = [];
-  private inputs: HTMLInputElement[] = null;
 
   constructor(
     private element: ElementRef,
     private form: NgForm,
     private render: Renderer2
   ) { }
-  // parentElement
 
   ngOnInit(): void {
-    const formSub = this.form.ngSubmit.subscribe((ev: any ) => {
+    const formSub = this.form.ngSubmit.subscribe(() => {
+      this.resetErrors();
       this.setErrors();
     });
     this.subs.push(formSub);
@@ -29,24 +28,25 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
 
   private setErrors(): void {
     const incorrectInputs = this.checkIncorrectInputs();
-    const htmlElements = this.element.nativeElement.elements;
+    const htmlElements: HTMLInputElement[] = this.element.nativeElement.elements;
     if (!incorrectInputs.length || !htmlElements.length) {
       return;
     }
-    console.log(htmlElements, 'htmlElements');
     incorrectInputs.forEach((incorrectInput: { name: string, errors: any }) => {      
       if(!htmlElements[incorrectInput.name]) {
         return;
       }
-      console.log(htmlElements[incorrectInput.name], 'pokazanie tego inputa');
-      this.renderError();
+      this.renderError(htmlElements[incorrectInput.name]);
     });
   }
 
-  private renderError(): void {
+  private renderError(element: HTMLInputElement): void {
     const error = this.render.createElement('div');
+    const errorText = this.render.createText('E-mail jest wymagany');
     console.log(error, 'error');
-    // <div *ngIf="email.hasError('required') && email.touched" class="form_error">E-mail jest wymagany</div> -->
+    this.render.addClass(error, 'form_error');
+    this.render.appendChild(error, errorText);
+    this.render.appendChild(element.parentElement, error);
   }
 
   private checkIncorrectInputs(): { name: string, errors: any }[] {    
@@ -59,5 +59,14 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
       }
     }
     return incorrectInputs;
+  }
+
+  private resetErrors(): void {
+    const allReadyErrors = this.element.nativeElement.querySelectorAll('.form_error');
+    allReadyErrors.forEach((errorElement: any) => {
+      console.log(errorElement, 'errorElement');
+      errorElement.remove();
+    })
+    console.log(allReadyErrors);
   }
 }
