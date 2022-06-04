@@ -46,6 +46,7 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
     this.render.addClass(error, 'form_error');
     this.render.appendChild(error, errorText);
     this.render.appendChild(element.parentElement, error);
+    this.render.addClass(element,'input_error');
   }
 
   private checkIncorrectInputs(): { name: string, errors: any }[] {    
@@ -61,9 +62,13 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
   }
 
   private resetErrors(): void {
-    const allReadyErrors = this.element.nativeElement.querySelectorAll('.form_error');
-    allReadyErrors.forEach((errorElement: any) => {
+    const inputsErrors = this.element.nativeElement.querySelectorAll('.input_error');
+    const infoErrors = this.element.nativeElement.querySelectorAll('.form_error');
+    infoErrors.forEach((errorElement: any) => {
       errorElement.remove();
-    })
+    });
+    inputsErrors.forEach((errorElement: any) => {
+      this.render.removeClass(errorElement, 'input_error');
+    });
   }
 }
