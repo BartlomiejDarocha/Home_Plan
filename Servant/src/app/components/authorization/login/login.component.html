@@ -6,7 +6,7 @@
       </div>
       <div id="login_Input" class="relative">
         <input [(ngModel)]="loginData.email" [class.input_error]="email.hasError('required') && email.touched" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required>
-        <div *ngIf="email.hasError('required') && email.touched" class="form_error">E-mail jest wymagany</div>
+        <!-- <div *ngIf="email.hasError('required') && email.touched" class="form_error">E-mail jest wymagany</div> -->
       </div>
       <div id="password_Input" class="relative">
         <input [(ngModel)]="loginData.password" [type]="showPassword ? 'text' : 'password'" [class.input_error]="password.hasError('required') && password.touched" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
@@ -16,7 +16,7 @@
             <a *ngIf="showPassword" class="eye_cross"></a>
           </button>
         </div>
-        <div *ngIf="password.hasError('required') && password.touched" class="form_error">Hasło jest wymagane</div>
+        <!-- <div *ngIf="password.hasError('required') && password.touched" class="form_error">Hasło jest wymagane</div> -->
       </div>
       <div class="login_options">
         <div>

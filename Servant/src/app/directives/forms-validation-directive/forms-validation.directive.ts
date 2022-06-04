@@ -7,17 +7,13 @@ import { Subscription } from 'rxjs';
 })
 export class FormsValidationDirective implements OnInit, OnDestroy {
   private subs: Subscription[] = [];
-  private formsControl = null;
   private inputs: HTMLInputElement[] = null;
 
   constructor(private element: ElementRef, private form: NgForm ) { }
 
   ngOnInit(): void {
     const formSub = this.form.ngSubmit.subscribe((ev: any ) => {
-      this.formsControl = this.form.form.controls;
-      console.log(this.formsControl, 'this.formsControl');
-      this.checkIncorrectInputs();
-      // this.getHtmlElements();
+      this.renderErrors();
     });
     this.subs.push(formSub);
   }
@@ -26,16 +22,26 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
     this.subs.filter(sub => sub).forEach(sub => sub.unsubscribe());
   }
 
-  private checkIncorrectInputs(): { name: string, error: string }[] {
-    return []
+  private renderErrors(): void {
+    const incorrectInputs = this.checkIncorrectInputs();
+    const htmlElements = this.element.nativeElement.elements;
+    if (!incorrectInputs.length || !htmlElements.length) {
+      console.log('return');
+      return;
+    }
+    console.log(incorrectInputs, 'incorrectInputs');
+    console.log(htmlElements, 'htmlElements');
   }
 
-  private getHtmlElements(): void {
-    const htmlElements = this.element.nativeElement.elements;
-    // const inputs = this.element.nativeElement.elements.filter((element: HTMLInputElement) => element.name);
-    // console.log(inputs, 'inputs');
-
-    // this.inputs =
-    // console.log(htmlElements,  'this.htmlElements');
+  private checkIncorrectInputs(): { name: string, errors: any }[] {    
+    const incorrectInputs = [];
+    const formsControls = this.form.form.controls;
+    for (const key in formsControls) {
+      if (formsControls[key].status === 'INVALID') {
+        const errors = formsControls[key].errors;
+        incorrectInputs.push({name: key, errors});
+      }
+    }
+    return incorrectInputs;
   }
 }
