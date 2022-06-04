@@ -5,11 +5,12 @@
   margin: 5% auto;
   .login_form {
     @include flexFullCenter;
-    border: 2.5px solid $main-green;
-    border-radius: 15%;
+    border-bottom: 10px solid $main-green;
+    border-top: 10px solid $main-green;
     height: 350px;
     padding: 20px;
-    background-color: $background-second;
+    // background-color: $background-second;
+    background-color: #464545a3;
     form {
       #login_Input, #password_Input {
         margin-bottom: 25px;

@@ -5,7 +5,7 @@
         <i class="ic-login"></i>
       </div>
       <div id="login_Input" class="relative">
-        <input [(ngModel)]="loginData.email" [class.input_error]="email.hasError('required') && email.touched" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required>
+        <input [(ngModel)]="loginData.email" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required>
       </div>
       <div id="password_Input" class="relative">
         <input [(ngModel)]="loginData.password" [type]="showPassword ? 'text' : 'password'" [class.input_error]="password.hasError('required') && password.touched" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
