@@ -98,9 +98,14 @@ export class SketchComponent {
     const newPostbody = {
       tittle: 'nowy Post',
       body: 'Body nowego postu',
-      likes: 18
+      likes: 18,
+      favs: [
+        {favname: 'acdc', rate: 10},
+        {favname: 'rollingStonse', rate: 5},
+        {favname: 'metallica', rate: 7}
+      ]
     }
-    this.apiService.post('http://localhost:3000/posts',newPostbody).subscribe((data: any) => {
+    this.apiService.post('http://localhost:8000/products',newPostbody).subscribe((data: any) => {
       console.log('Post newPostBody', data);
     });
   }

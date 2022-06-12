@@ -29,10 +29,18 @@ export class ApiService {
     }
   } 
 
+  // private dataToSend(data): string {
+  //   const body = new URLSearchParams;
+  //   this.dataToSendConvert(data, body);
+  //   console.log(body.toString(), 'body to string');
+  //   console.log(JSON.parse(body.toString()), 'json parse body to string');
+  //   return body.toString();
+  // }
+
   private dataToSend(data): string {
-    const body = new URLSearchParams;
-    this.dataToSendConvert(data, body);
-    return body.toString();
+    console.log(data, 'data')
+    console.log(JSON.stringify(data),'body stringfly 2');
+    return JSON.stringify(data);
   }
 
   public get(url: string, options = {changeApi: null, params: {}}): Observable<any> {
