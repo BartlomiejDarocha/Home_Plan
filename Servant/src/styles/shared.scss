@@ -1,3 +1,16 @@
 .relative {
   position: relative;
 }
+
+.common_link {
+  color: $main-green;
+  text-decoration: none;
+}
+
+.icons_mode {
+  display: block;
+  background-size: contain;
+  mask-size: contain;
+  background-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}

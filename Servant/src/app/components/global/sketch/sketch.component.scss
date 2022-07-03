@@ -69,14 +69,14 @@
         }
         .automaticIconbeffore::before {
             @include iconsSd(url('/assets/svg/user.svg'), 30px, 30px, $main-green);
-            @include iconBeforeInputPosition(25px, 0.11);
+            @include iconInputPosition(25px, 0.11);
         }
         .automaticIconBIgbeffore {
             @include iconBeforeInputPadding(60px, 1);
         }
         .automaticIconBIgbeffore::before {
             @include iconsSd(url('/assets/svg/fingerprint-solid.svg'), 60px, 60px, $main-green);
-            @include iconBeforeInputPosition(60px, 0.1);
+            @include iconInputPosition(60px, 0.1);
         }
     }
 }
