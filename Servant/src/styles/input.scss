@@ -20,6 +20,14 @@
   border: solid $text-two 1px;
 }
 
+.icons_mode {
+  display: block;
+  background-size: contain;
+  mask-size: contain;
+  background-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
 .form_error {
   padding-top: 2px;
   color: $text-two;

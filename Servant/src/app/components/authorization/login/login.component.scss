@@ -24,7 +24,7 @@
         @include iconBeforeInputPosition(25px, 0.18);
       }
       #password_Input {
-        @include iconAInputPaddingBothSide(25px);
+        @include iconInputPaddingBothSide(25px);
       }
       #password_Input::before {
         @include iconsSd(url('/assets/svg/key-solid.svg'), 25px, 25px, $main-green);

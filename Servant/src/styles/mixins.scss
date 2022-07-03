@@ -1,22 +1,16 @@
 // ICONS
 @mixin iconsSd($url, $width: 25px, $height: 25px, $color) {
-  display: block;
   width: $width;
   height: $height;
   background-color: $color;
   -webkit-mask-image: $url;
   mask-image: $url;
-  mask-size: contain;
-  mask-repeat: no-repeat;
 }
 
 @mixin iconsNoColor($url, $width: 25px, $height: 25px) {
-  display: block;
   min-width: $width;
   min-height: $height;
   background-image: $url;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 // INPUTS
@@ -31,7 +25,7 @@
     }
   }
 }
-@mixin iconAInputPaddingBothSide($iconSize, $heightInherit:0) {
+@mixin iconInputPaddingBothSide($iconSize, $heightInherit:0) {
   position: relative;
   .common_input {
     padding: calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 1.4) calc(#{$iconSize} * 0.4) calc(#{$iconSize} * 1.4);
