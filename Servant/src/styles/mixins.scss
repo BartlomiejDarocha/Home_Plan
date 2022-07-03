@@ -37,14 +37,7 @@
   }
 }
 
-@mixin iconBeforeInputPosition($iconSize, $positonValue) {
-  content: '';
-  position: absolute;
-  top: calc(#{$iconSize} * #{$positonValue});
-  left: calc(#{$iconSize} * #{$positonValue});
-}
-
-@mixin iconAfterInputPosition($iconSize, $positonValue) {
+@mixin iconInputPosition($iconSize, $positonValue) {
   content: '';
   position: absolute;
   top: calc(#{$iconSize} * #{$positonValue});

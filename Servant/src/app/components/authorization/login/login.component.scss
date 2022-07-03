@@ -21,14 +21,14 @@
       }
       #login_Input::before {
         @include iconsSd(url('/assets/svg/user.svg'), 25px, 25px, $main-green);
-        @include iconBeforeInputPosition(25px, 0.18);
+        @include iconInputPosition(25px, 0.18);
       }
       #password_Input {
         @include iconInputPaddingBothSide(25px);
       }
       #password_Input::before {
         @include iconsSd(url('/assets/svg/key-solid.svg'), 25px, 25px, $main-green);
-        @include iconBeforeInputPosition(30px, 0.18);
+        @include iconInputPosition(30px, 0.18);
       }
       .eye {
         font-size: 25px;
