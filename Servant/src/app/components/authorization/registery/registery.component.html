@@ -1,1 +1,28 @@
-<p>registery works!</p>
+<div class="login_wrapper">
+  <div class="login_form">
+    <form #loginForm="ngForm" formsValidation (submit)="register()">
+      <div class="login_icon">
+        <i class="ic-login"></i>
+      </div>
+      <div id="login_Input" class="icons_mode">
+        <input [(ngModel)]="loginData.email" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required minlength="3">
+      </div>
+      <div id="password_Input" class="icons_mode">
+        <input [(ngModel)]="loginData.password" [type]="showPassword ? 'text' : 'password'" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
+        <div class="eye ">
+          <button type="button" (click)="changeEye()" class="icon_button">
+            <a *ngIf="!showPassword" class="eye_icon icons_mode"></a>
+            <a *ngIf="showPassword" class="eye_cross icons_mode"></a>
+          </button>
+        </div>
+      </div>
+      <div class="login_options">
+        <a class="common_link" routerLink="/auth/registery" href="">Zarejestruj się</a>
+        <a class="common_link" href="">Zapomniałeś hasła?</a>
+      </div>
+      <div class="login_button">
+        <button class="classic_button" mat-stroked-button>Zaloguj</button>
+      </div>
+    </form>
+  </div>
+</div>
