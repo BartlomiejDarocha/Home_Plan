@@ -1,21 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { EmailPattern } from 'src/app/models/patterns/patterns';
 
 @Component({
   selector: 'app-registery',
   templateUrl: './registery.component.html',
   styleUrls: ['./registery.component.scss']
 })
-export class RegisteryComponent implements OnInit {
+export class RegisteryComponent extends EmailPattern implements  OnInit {
   public registeryData = {
     name: '',
-    nickName: '',
     avatar: '',
     email: '',
-    
-    
+    sex: '',
+    password: '',
+    passwordRepeat: ''
   }
 
-  constructor() { }
+  constructor() {
+    super()
+   }
 
   ngOnInit(): void {
   }
