@@ -1,0 +1,15 @@
+@import "/src/styles/common-imports.scss";
+
+.login_wrapper {
+  @include flexHorizontalCenter;
+  margin: 5% auto;  // zmienić nazwy i zamienić na klasy
+  .login_form {
+    @include flexFullCenter; // zmienić nazwy i zamienić na klasy
+    border-bottom: 10px solid $main-green;
+    border-top: 10px solid $main-green;
+    padding: 20px;
+    background-color: $background-second;
+  }
+}
+
+
