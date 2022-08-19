@@ -1,11 +1,14 @@
 @import "/src/styles/common-imports.scss";
 
 .padding_right {
-  padding-right: 0.5rem;
+  // padding-right: 0.5rem;
+  padding-right: 8px;
+
 }
 
 .padding_left {
-  padding-left: 0.5rem;
+  // padding-left: 0.5rem;
+  padding-left: 8px;
 }
 
 .icon_button {
@@ -23,8 +26,10 @@
 .header {
   color: $font-main;
   background-color: $background-second;
-  max-height: 4.5rem;
-  height: 4.5rem;
+  max-height: 50px;
+  height: 50px;
+  // max-height: 4.5rem;
+  // height: 4.5rem;
   display: flex;
   justify-content: space-between;
   .text_wrapper {
@@ -50,7 +55,8 @@
   .menu_wrapper {
     display: flex;
     align-items: center;
-    padding-right: 0.6rem;
+    // padding-right: 0.6rem;
+    padding-right: 9px;
   }
   .options_wrapper {
     display: none;

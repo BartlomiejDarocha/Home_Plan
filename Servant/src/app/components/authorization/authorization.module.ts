@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '../../shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MainViewContainerModule } from '../global/main-view-container/main-view-container.module';
 import { AccountRecoveryComponent } from './account-recovery/account-recovery.component';
-import { LoginComponent } from './login/login.component';
-import { RegisteryComponent } from './registery/registery.component';
 import { AuthorizationRoutingModule } from './authorization-routing.module';
 import { AuthorizationComponent } from './authorization.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { RegisteryComponent } from './registery/registery.component';
 
 
 
@@ -17,15 +17,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AuthorizationComponent
   ],
   imports: [
-    SharedModule,
     FormsModule,
+    MainViewContainerModule,
     ReactiveFormsModule,
-    AuthorizationRoutingModule
+    AuthorizationRoutingModule,
   ],
   exports: [
     LoginComponent,
     RegisteryComponent,
-    AccountRecoveryComponent
+    AccountRecoveryComponent,
+    MainViewContainerModule,
   ]
 })
 export class AuthorizationModule { }

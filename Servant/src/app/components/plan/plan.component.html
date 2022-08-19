@@ -2,15 +2,7 @@
   <mat-drawer #sideMenu mode="over" position="start">I'm a drawer</mat-drawer>
   <mat-drawer-content>
     <app-main-view-container>
-      
+      <router-outlet></router-outlet>      
     </app-main-view-container>
-    
-    <!-- <div class="main_container">
-      <app-header [logged]="true" (openSideMenu$)="sideMenu.toggle()"></app-header>
-      <div class="main">
-        <router-outlet></router-outlet>
-      </div>
-      <app-footer></app-footer>
-    </div> -->
   </mat-drawer-content>
 </mat-drawer-container>
