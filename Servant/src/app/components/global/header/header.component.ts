@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
- @Input() logged = false;
- @Output() openSideMenu$ = new EventEmitter();
+ public logged = false;
+ // line above will be on subject also in sevice below
   constructor() { }
-
   public openSideMenu(): void {
-    this.openSideMenu$.emit();
+    // sideMenu.toggle()" to do service
+    console.log('this go to service which is not ready yet, code line above');
   }
 }
