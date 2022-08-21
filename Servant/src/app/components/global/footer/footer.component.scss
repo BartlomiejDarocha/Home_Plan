@@ -2,7 +2,7 @@
 
 .icon_angular {
   @include iconsNoColor(url('/assets/svg/angular.svg'), 23px, 23px);
-  background-position: -2px;
+  background-position: -3px;
   margin-right: 0 !important;
 }
 
@@ -20,31 +20,19 @@
 
 .fotter_wraper {
   color: $font-main;
-  height: auto;
-  // max-height: auto;
   background: $background-second;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  div:nth-child(1) {
-    max-width: 70%
-  }
   .powerder_box {
     padding-left: 10px;
-    height: 25px;
-    max-width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     .powerder_title {
       min-width: 100%;
-      height: 100%;
     }
     ul {
       margin: 0;
       list-style-type: none;
       padding: 0;
-      height: 100%;
       li {
         margin: 2px 0 0 0;
         height: 100%;
@@ -72,21 +60,19 @@
 @media (min-width: 991px) {
   .fotter_wraper {
     height: 65px;
-    div:nth-child(1) {
-      max-width: none;
-    }
     .powerder_box {
       padding-left: 0;
-      max-width: none;
+      display: flex;
       flex-direction: row;
       .powerder_title {
-        max-width: none;
         min-width: 0;
+        min-width: none;
         padding-right: 5px;
         height: auto;
       }
       ul {
         display: flex;
+        padding-bottom: 25px;
         li {
           margin: 0px;
         }
