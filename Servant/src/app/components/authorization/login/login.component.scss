@@ -9,7 +9,7 @@
     background-color: $background-second;
     form {
       #login_Input, #password_Input {
-        padding-bottom: 25px;
+        margin-bottom: 16px;
         .common_input {
           width: 100%;
         }
@@ -44,14 +44,10 @@
         }
       }
 
-      .login_options {
-        display: flex;
-        margin-bottom: 15px;
-        a {
-          padding-top: 3px;
-          padding-left: 10px;
-        }
-      }
+      // .login_options {
+      //   display: flex;
+      //   margin-bottom: 15px;
+      // }
     }
   }
 }

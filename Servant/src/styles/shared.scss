@@ -14,3 +14,40 @@
   background-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
+
+.flexHorizontalCenter{
+  display: flex;
+  justify-content: center; 
+}
+
+.flexFullCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.margin_top {
+  margin-top: 8px;
+}
+
+.margin_bottom {
+  margin-bottom: 8px;
+}
+
+.margin_horizontal {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.margin_vertical {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.margin_left {
+  margin-left: 8px;
+}
+
+.margin_right {
+  margin-right: 8px;
+}
