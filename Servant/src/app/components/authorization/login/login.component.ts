@@ -26,6 +26,7 @@ export class LoginComponent extends EmailPattern implements OnInit {
   }
 
   public login(): void {
+    console.log('submit');
   }
 
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { MainViewContainerModule } from '../global/main-view-container/main-view-container.module';
 import { AccountRecoveryComponent } from './account-recovery/account-recovery.component';
 import { AuthorizationRoutingModule } from './authorization-routing.module';
@@ -17,6 +18,7 @@ import { RegisteryComponent } from './registery/registery.component';
     AuthorizationComponent
   ],
   imports: [
+    SharedModule,
     FormsModule,
     MainViewContainerModule,
     ReactiveFormsModule,

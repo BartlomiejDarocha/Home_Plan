@@ -9,7 +9,7 @@
       </div>
       <div id="password_Input" class="icons_mode">
         <input [(ngModel)]="loginData.password" [type]="showPassword ? 'text' : 'password'" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
-        <div class="eye ">
+        <div class="eye">
           <button type="button" (click)="changeEye()" class="icon_button">
             <a *ngIf="!showPassword" class="eye_icon icons_mode"></a>
             <a *ngIf="showPassword" class="eye_cross icons_mode"></a>
