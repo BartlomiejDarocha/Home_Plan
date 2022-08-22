@@ -27,3 +27,14 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG) ;
 }
+
+.flexHorizontalCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.flexFullCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}

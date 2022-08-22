@@ -1,10 +1,8 @@
 @import "/src/styles/common-imports.scss";
 
 .login_wrapper {
-  @include flexHorizontalCenter;
   margin: 5% auto;
   .login_form {
-    @include flexFullCenter;
     border-bottom: 10px solid $main-green;
     border-top: 10px solid $main-green;
     padding: 20px;
@@ -59,7 +57,7 @@
 }
 
 .login_icon {
-  @include flexHorizontalCenter;
+  margin-bottom: 8px;
 }
 
 .ic-login {
@@ -67,13 +65,12 @@
   height: 50px;
   display: block;
   background-color: $main-green;
-  -webkit-mask-image: url('/assets/svg/users-solid.svg');
-  mask-image: url('/assets/svg/users-solid.svg');
+  -webkit-mask-image: url('/assets/svg/right-to-bracket-solid.svg');
+  mask-image: url('/assets/svg/right-to-bracket-solid.svg');
   mask-repeat: no-repeat;
 }
 
 .login_button {
-  @include flexHorizontalCenter;
   button {
     width: 100%;
   }
