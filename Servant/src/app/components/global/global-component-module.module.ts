@@ -8,7 +8,7 @@ import { SketchComponent } from './sketch/sketch.component';
   declarations: [
     LoaderGlobalComponent,
     HomeComponent,
-    SketchComponent,    
+    SketchComponent    
   ],
   imports: [
     SharedModule,

@@ -8,13 +8,8 @@
         <input [(ngModel)]="loginData.email" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required minlength="3">
       </div>
       <div id="password_Input" class="icons_mode">
-        <input [(ngModel)]="loginData.password" [type]="showPassword ? 'text' : 'password'" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
-        <div class="eye">
-          <button type="button" (click)="changeEye()" class="icon_button">
-            <a *ngIf="!showPassword" class="eye_icon icons_mode"></a>
-            <a *ngIf="showPassword" class="eye_cross icons_mode"></a>
-          </button>
-        </div>
+        <input [(ngModel)]="loginData.password" [type]="passwordEye.inputType" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
+        <app-password-eye #passwordEye></app-password-eye>
       </div>
       <div class="margin_bottom">
         <a class="common_link" href="">Zapomniałeś hasła?</a>

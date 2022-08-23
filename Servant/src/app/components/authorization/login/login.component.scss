@@ -28,26 +28,6 @@
         @include iconsSd(url('/assets/svg/key-solid.svg'), 25px, 25px, $main-green);
         @include iconInputPosition(30px, 0.18);
       }
-      .eye {
-        // font-size: 25px;
-        color: $main-green;
-        position: absolute;
-        display: inline;
-        left: unset;
-        right: -5px;
-        top: 2px;
-        .eye_icon {
-          @include iconsSd(url('/assets/svg/eye-regular.svg'), 20px, 20px, $main-green);
-        }
-        .eye_cross {
-          @include iconsSd(url('/assets/svg/eye-slash-regular.svg'), 20px, 20px, $main-green);
-        }
-      }
-
-      // .login_options {
-      //   display: flex;
-      //   margin-bottom: 15px;
-      // }
     }
   }
 }

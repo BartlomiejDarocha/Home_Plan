@@ -8,7 +8,6 @@ import { EmailPattern } from 'src/app/models/patterns/patterns';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent extends EmailPattern implements OnInit {
-  public showPassword = false;
   public loginData: LoginDataModel = {
     email: '',
     password: ''
@@ -20,11 +19,7 @@ export class LoginComponent extends EmailPattern implements OnInit {
 
   ngOnInit(): void {
   }
-
-  public changeEye(): void {
-    this.showPassword = !this.showPassword;
-  }
-
+  
   public login(): void {
     console.log('submit');
   }
