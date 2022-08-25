@@ -1,0 +1,53 @@
+@import "/src/styles/common-imports.scss";
+
+.login_wrapper {
+  margin: 5% auto;
+  .login_form {
+    border-bottom: 10px solid $main-green;
+    border-top: 10px solid $main-green;
+    padding: 20px;
+    background-color: $background-second;
+    form {
+      #login_Input, #password_Input {
+        margin-bottom: 16px;
+        .common_input {
+          width: 100%;
+        }
+      }
+      #login_Input {
+        @include iconBeforeInputPadding(25px);
+      }
+      #login_Input::before {
+        @include iconsSd(url('/assets/svg/user.svg'), 25px, 25px, $main-green);
+        @include iconInputPosition(25px, 0.18);
+      }
+      #password_Input {
+        @include iconInputPaddingBothSide(25px);
+      }
+      #password_Input::before {
+        @include iconsSd(url('/assets/svg/key-solid.svg'), 25px, 25px, $main-green);
+        @include iconInputPosition(30px, 0.18);
+      }
+    }
+  }
+}
+
+.login_icon {
+  margin-bottom: 8px;
+}
+
+.ic-login {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-color: $main-green;
+  -webkit-mask-image: url('/assets/svg/right-to-bracket-solid.svg');
+  mask-image: url('/assets/svg/right-to-bracket-solid.svg');
+  mask-repeat: no-repeat;
+}
+
+.login_button {
+  button {
+    width: 100%;
+  }
+}

@@ -1,1 +1,23 @@
-<p>registery works!</p>
+<div class="login_wrapper flexHorizontalCenter">
+  <div class="login_form flexFullCenter">
+    <form #loginForm="ngForm" formsValidation (submit)="registery()">
+      <div class="login_icon flexHorizontalCenter">
+        <i class="ic-login"></i>
+      </div>
+      <div id="login_Input" class="icons_mode">
+        <input [(ngModel)]="registeryData.email" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required minlength="3">
+      </div>
+      <div id="password_Input" class="icons_mode">
+        <input [(ngModel)]="registeryData.password" [type]="passwordEye.inputType" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
+        <app-password-eye #passwordEye></app-password-eye>
+      </div>
+      <div id="password_Input_repeat" class="icons_mode">
+        <input [(ngModel)]="registeryData.passwordRepeat" [type]="passwordEye.inputType" name="passwordRepeat" #password="ngModel" class="common_input" placeholder="Hasło" required>
+        <app-password-eye #passwordEye></app-password-eye>
+      </div>
+      <div class="login_button flexHorizontalCenter">
+        <button class="classic_button" mat-stroked-button>Zarejestruj</button>
+      </div>
+    </form>
+  </div>
+</div>
