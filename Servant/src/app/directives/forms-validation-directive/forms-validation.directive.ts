@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, Input, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { AlertsErrors } from 'src/app/models/validations-alerts/validations-alerts.enum';
@@ -9,6 +9,7 @@ interface IncorrectInputModel { name: string; errors: any };
   selector: '[formsValidation]'
 })
 export class FormsValidationDirective implements OnInit, OnDestroy {
+  @Input() customErrors = null;
   private subs: Subscription[] = [];
   private alertsErrors = AlertsErrors;
 

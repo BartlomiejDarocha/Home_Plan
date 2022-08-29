@@ -3,3 +3,8 @@ export enum AlertsErrors {
   pattern = 'Wypełnij pole poprawnie.',
   minlength = 'Minimalna liczba znaków wynosi'
 }
+
+export interface CustomAlert {
+  text: string;
+  
+}
