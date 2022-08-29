@@ -6,5 +6,9 @@ export enum AlertsErrors {
 
 export interface CustomAlert {
   text: string;
-  
+  methodToCheckStatus: Function
+  methodToDisplayAlert: Function;
+  mainInputName: string;
+  errorKeysOption?: string[];
+  inputNamesOption?: string[];
 }

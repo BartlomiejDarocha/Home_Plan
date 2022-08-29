@@ -9,9 +9,10 @@ interface IncorrectInputModel { name: string; errors: any };
   selector: '[formsValidation]'
 })
 export class FormsValidationDirective implements OnInit, OnDestroy {
-  @Input() customErrors = null;
+  @Input() customError = null;
   private subs: Subscription[] = [];
   private alertsErrors = AlertsErrors;
+  private htmlElements: HTMLInputElement[] = [];
 
   constructor(
     private element: ElementRef,
@@ -33,23 +34,38 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
 
   private setErrors(): void {
     const incorrectInputs = this.checkIncorrectInputs();
-    const htmlElements: HTMLInputElement[] = this.element.nativeElement.elements;
-    if (!incorrectInputs.length || !htmlElements.length) {
+    this.htmlElements = [];
+    this.htmlElements = this.element.nativeElement.elements;
+    if (!incorrectInputs.length || this.htmlElements.length) {
       return;
     }
-    incorrectInputs.forEach((incorrectInput: IncorrectInputModel) => {      
-      if(!htmlElements[incorrectInput.name]) {
+    incorrectInputs.forEach((incorrectInput: IncorrectInputModel) => {
+      if (!this.htmlElements[incorrectInput.name]) {
         return;
       }
       for (const key in incorrectInput.errors) {
-        this.renderError(htmlElements[incorrectInput.name], key, incorrectInput.errors[key]['requiredLength']);
+        console.log(key, 'key');
+        console.log(incorrectInput.name, 'incorrectInput.name'); // czyli po prostu name inputa
+        this.renderError(this.htmlElements[incorrectInput.name], key, incorrectInput.errors[key]['requiredLength']);
+      }
+
+      if (!this.customError) {
+        return;
       }
     });
   }
 
-  private renderError(element: HTMLInputElement, errorKey: string, extraInfo?: string): void {
+  private checkCustomError() {
+    if (!this.customError && !this.customError.methodToCheckStatus) {
+      return;
+    }
+    this.customError.methodToDisplayAlert();
+    this.renderError(this.htmlElements[this.customError.name],this.customError.text);
+  }
+
+  private renderError(element: HTMLInputElement, errorKey: string, extraLengthInfo?: string): void {
     const error = this.render.createElement('div');
-    const errorText = this.render.createText(extraInfo ? `${this.alertsErrors[errorKey]} ${extraInfo}.` : this.alertsErrors[errorKey]);
+    const errorText = this.render.createText(extraLengthInfo ? `${this.alertsErrors[errorKey]} ${extraLengthInfo}.` : this.alertsErrors[errorKey]);
     this.render.addClass(error, 'form_error');
     this.render.appendChild(error, errorText);
     this.render.appendChild(element.parentElement, error);
