@@ -7,6 +7,7 @@
       <div id="login_Input" class="icons_mode">
         <input [(ngModel)]="registeryData.email" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required minlength="3">
       </div>
+      <div [innerText]="email.value"></div>
       <div id="password_Input" class="icons_mode">
         <input [(ngModel)]="registeryData.password" [type]="passwordEye.inputType" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
         <app-password-eye #passwordEye></app-password-eye>
