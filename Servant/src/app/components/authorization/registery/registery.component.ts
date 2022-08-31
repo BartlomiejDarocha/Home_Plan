@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { EmailPattern } from 'src/app/models/patterns/patterns';
+import { CustomAlertInteface } from 'src/app/models/validations-alerts/validations-alerts.enum';
 
 @Component({
   selector: 'app-registery',
@@ -14,6 +15,10 @@ export class RegisteryComponent implements OnInit {
     email: '',
     password: '',
     passwordRepeat: '',
+  }
+  public customRepeatPasswordError: CustomAlertInteface = {
+    alertText: 'Podane hasła nie są identyczne',
+    inputName: 'passwordRepeat',
   }
 
   ngOnInit(): void {

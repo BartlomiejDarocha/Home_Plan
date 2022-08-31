@@ -34,7 +34,7 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
   private setErrors(): void {
     const incorrectInputs = this.checkIncorrectInputs();
     console.log(incorrectInputs, 'incorrectInputs');
-    
+     
     const htmlElements: HTMLInputElement[] = this.element.nativeElement.elements;
     if (!incorrectInputs.length || !htmlElements.length) {
       return;
@@ -44,9 +44,14 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
         return;
       }
       for (const key in incorrectInput.errors) {
-        this.renderError(htmlElements[incorrectInput.name], key, incorrectInput.errors[key]['requiredLength']);
-        // console.log(key, 'key');
-        // console.log(incorrectInput.name, 'incorrectInput.name'); // czyli po prostu name inputa
+        console.log(key, 'key');
+        console.log(this.alertsErrors[key]);
+        if (!this.alertsErrors[key]) {
+          console.log(htmlElements[incorrectInput.name], 'specialna obsługa błędu');
+          this.customRenderError(htmlElements[incorrectInput.name])
+        } else {
+          this.renderError(htmlElements[incorrectInput.name], key, incorrectInput.errors[key]['requiredLength']);
+        }
       }
 
       if (!this.customError) {
@@ -54,13 +59,14 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
       }
     });
   }
-
-  private checkCustomError() {
-    // if (!this.customError && !this.customError.methodToCheckStatus) {
-    //   return;
-    // }
-    // this.customError.methodToDisplayAlert();
-    // this.renderError(this.htmlElements[this.customError.name],this.customError.text);
+  // te dwie funckaj do usprawnienia gdy będę robić dla tablic
+  private customRenderError(element: HTMLInputElement) {
+    const error = this.render.createElement('div');
+    const errorText = this.render.createText(this.customError.alertText);
+    this.render.addClass(error, 'form_error');
+    this.render.appendChild(error, errorText);
+    this.render.appendChild(element.parentElement, error);
+    this.render.addClass(element,'input_error');
   }
 
   private renderError(element: HTMLInputElement, errorKey: string, extraLengthInfo?: string): void {

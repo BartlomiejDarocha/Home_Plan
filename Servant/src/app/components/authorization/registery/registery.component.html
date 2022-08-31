@@ -1,6 +1,6 @@
 <div class="login_wrapper flexHorizontalCenter">
   <div class="login_form flexFullCenter">
-    <form #resgisteryForm="ngForm" formsValidation (submit)="registery()">
+    <form #resgisteryForm="ngForm" formsValidation [customError]="customRepeatPasswordError" (submit)="registery()">
       <div class="login_icon flexHorizontalCenter">
         <i class="ic-login"></i>
       </div>
