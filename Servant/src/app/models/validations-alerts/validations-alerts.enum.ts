@@ -4,11 +4,7 @@ export enum AlertsErrors {
   minlength = 'Minimalna liczba znaków wynosi'
 }
 
-export interface CustomAlert {
-  text: string;
-  methodToCheckStatus: Function
-  methodToDisplayAlert: Function;
-  mainInputName: string;
-  errorKeysOption?: string[];
-  inputNamesOption?: string[];
+export interface CustomAlertInteface {
+  alertText: string;
+  inputName: string;
 }

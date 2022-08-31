@@ -19,8 +19,6 @@ export class RegisteryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
-
   public registery() {
     console.log(this.resgisteryForm, 'registery form');    
   }
