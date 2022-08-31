@@ -12,7 +12,6 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
   @Input() customError: CustomAlertInteface = null;
   private subs: Subscription[] = [];
   private alertsErrors = AlertsErrors;
-  private htmlElements: HTMLInputElement[] = [];
 
   constructor(
     private element: ElementRef,
@@ -36,19 +35,18 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
     const incorrectInputs = this.checkIncorrectInputs();
     console.log(incorrectInputs, 'incorrectInputs');
     
-    this.htmlElements = [];
-    this.htmlElements = this.element.nativeElement.elements;
-    if (!incorrectInputs.length || this.htmlElements.length) {
+    const htmlElements: HTMLInputElement[] = this.element.nativeElement.elements;
+    if (!incorrectInputs.length || !htmlElements.length) {
       return;
     }
-    incorrectInputs.forEach((incorrectInput: IncorrectInputModel) => {
-      if (!this.htmlElements[incorrectInput.name]) {
+    incorrectInputs.forEach((incorrectInput: IncorrectInputModel) => {      
+      if(!htmlElements[incorrectInput.name]) {
         return;
       }
       for (const key in incorrectInput.errors) {
-        console.log(key, 'key');
-        console.log(incorrectInput.name, 'incorrectInput.name'); // czyli po prostu name inputa
-        this.renderError(this.htmlElements[incorrectInput.name], key, incorrectInput.errors[key]['requiredLength']);
+        this.renderError(htmlElements[incorrectInput.name], key, incorrectInput.errors[key]['requiredLength']);
+        // console.log(key, 'key');
+        // console.log(incorrectInput.name, 'incorrectInput.name'); // czyli po prostu name inputa
       }
 
       if (!this.customError) {

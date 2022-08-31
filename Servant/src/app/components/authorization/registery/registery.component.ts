@@ -8,7 +8,7 @@ import { EmailPattern } from 'src/app/models/patterns/patterns';
   styleUrls: ['./registery.component.scss']
 })
 export class RegisteryComponent implements OnInit {
-  @ViewChild('resgisteryForm') public resgisteryForm: NgForm;
+  // @ViewChild('resgisteryForm') public resgisteryForm: NgForm;
   public emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   public registeryData = {
     email: '',
@@ -20,7 +20,7 @@ export class RegisteryComponent implements OnInit {
   }
 
   public registery() {
-    console.log(this.resgisteryForm, 'registery form');    
+    // console.log(this.resgisteryForm, 'registery form');    
   }
 
 }
