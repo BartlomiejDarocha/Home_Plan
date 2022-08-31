@@ -10,6 +10,6 @@ import { CheckPasswordRepeatDirective } from './form-custom-validators-directive
   imports: [
     CommonModule
   ],
-  exports: [FormsValidationDirective]
+  exports: [FormsValidationDirective, CheckPasswordRepeatDirective]
 })
 export class FormsValidationDirectiveModule { }

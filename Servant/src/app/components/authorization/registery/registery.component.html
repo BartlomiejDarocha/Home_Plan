@@ -1,6 +1,7 @@
 <div class="login_wrapper flexHorizontalCenter">
   <div class="login_form flexFullCenter">
-    <form #loginForm="ngForm" formsValidation (submit)="registery()">
+    <!-- formsValidation -->
+    <form #resgisteryForm="ngForm" (submit)="registery()">
       <div class="login_icon flexHorizontalCenter">
         <i class="ic-login"></i>
       </div>
@@ -13,8 +14,8 @@
         <app-password-eye #passwordEye></app-password-eye>
       </div>
       <div id="password_Input_repeat" class="icons_mode">
-        <input [(ngModel)]="registeryData.passwordRepeat" [type]="passwordEye.inputType" name="passwordRepeat" #password="ngModel" class="common_input" placeholder="Hasło" required>
-        <app-password-eye #passwordEye></app-password-eye>
+        <input [(ngModel)]="registeryData.passwordRepeat" [type]="passwordRepeatEye.inputType" name="passwordRepeat" #password="ngModel" appCheckPasswordRepeat [passwordValue]="password.value" class="common_input" placeholder="Powtórz hasło" required>
+        <app-password-eye #passwordRepeatEye></app-password-eye>
       </div>
       <div class="login_button flexHorizontalCenter">
         <button class="classic_button" mat-stroked-button>Zarejestruj</button>

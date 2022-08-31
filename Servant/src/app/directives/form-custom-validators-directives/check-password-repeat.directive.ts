@@ -3,7 +3,7 @@ import { ValidatorFn, AbstractControl, NG_VALIDATORS, Validator } from '@angular
 
 export function checkSamePasswordCorrectValidator(passwordValue: string): ValidatorFn {
   return (control: AbstractControl): {[key: string]: any} => {
-    const passwordsNotSame = passwordValue === control.value;
+    const passwordsNotSame = passwordValue !== control.value;
     return passwordsNotSame ? {'passwordsNotSame': {value: true}} : null;
   };
 }
@@ -16,7 +16,7 @@ export function checkSamePasswordCorrectValidator(passwordValue: string): Valida
 export class CheckPasswordRepeatDirective implements Validator {
   @Input('passwordValue') passwordValue: string;
 
-  validate(control: AbstractControl): {[key: string]: any} {
+  validate(control: AbstractControl): {[key: string]: any} {    
     return this.passwordValue ? checkSamePasswordCorrectValidator(this.passwordValue)(control): null;
   }
 }
