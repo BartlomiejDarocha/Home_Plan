@@ -2,12 +2,12 @@
   position: relative;
 }
 
-.common_link {
+.commonLink {
   color: $main-green;
   text-decoration: none;
 }
 
-.icons_mode {
+.iconsMode {
   display: block;
   background-size: contain;
   mask-size: contain;
@@ -26,28 +26,28 @@
   align-items: center; 
 }
 
-.margin_top {
+.marginTop {
   margin-top: 8px;
 }
 
-.margin_bottom {
+.marginBottom {
   margin-bottom: 8px;
 }
 
-.margin_horizontal {
+.marginHorizontal {
   margin-left: 8px;
   margin-right: 8px;
 }
 
-.margin_vertical {
+.marginVertical {
   margin-top: 8px;
   margin-bottom: 8px;
 }
 
-.margin_left {
+.marginLeft {
   margin-left: 8px;
 }
 
-.margin_right {
+.marginRight {
   margin-right: 8px;
 }

@@ -1,23 +1,23 @@
-<div class="login_wrapper flexHorizontalCenter">
-  <div class="login_form flexFullCenter">
+<div class="registeryWrapper flexHorizontalCenter">
+  <div class="registeryForm flexFullCenter">
     <form #resgisteryForm="ngForm" formsValidation [customError]="customRepeatPasswordError" (submit)="registery()">
-      <div class="login_icon flexHorizontalCenter">
-        <i class="ic-login"></i>
+      <div class="flexHorizontalCenter">
+        <i class="registeryIcon"></i>
       </div>
-      <div id="login_Input" class="icons_mode">
+      <div id="registeryInput" class="iconsMode">
         <input [(ngModel)]="registeryData.email" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required minlength="3">
       </div>
       <div [innerText]="email.value"></div>
-      <div id="password_Input" class="icons_mode">
+      <div id="passwordInput" class="iconsMode">
         <input [(ngModel)]="registeryData.password" [type]="passwordEye.inputType" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
         <app-password-eye #passwordEye></app-password-eye>
       </div>
-      <div id="password_Input_repeat" class="icons_mode">
+      <div id="passwordInputRepeat" class="iconsMode">
         <input [(ngModel)]="registeryData.passwordRepeat" [type]="passwordRepeatEye.inputType" name="passwordRepeat" #password="ngModel" appCheckPasswordRepeat [passwordValue]="password.value" class="common_input" placeholder="Powtórz hasło" required>
         <app-password-eye #passwordRepeatEye></app-password-eye>
       </div>
-      <div class="login_button flexHorizontalCenter">
-        <button class="classic_button" mat-stroked-button>Zarejestruj</button>
+      <div class="marginTop flexHorizontalCenter">
+        <button class="marginTop classicButton" mat-stroked-button>Zarejestruj</button>
       </div>
     </form>
   </div>

@@ -4,24 +4,24 @@
       <div class="login_icon flexHorizontalCenter">
         <i class="ic-login"></i>
       </div>
-      <div id="login_Input" class="icons_mode">
+      <div id="login_Input" class="iconsMode">
         <input [(ngModel)]="loginData.email" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required minlength="3">
       </div>
-      <div id="password_Input" class="icons_mode">
+      <div id="password_Input" class="iconsMode">
         <input [(ngModel)]="loginData.password" [type]="passwordEye.inputType" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
         <app-password-eye #passwordEye></app-password-eye>
       </div>
       <div class="margin_bottom">
-        <a class="common_link" href="">Zapomniałeś hasła?</a>
+        <a class="commonLink" href="">Zapomniałeś hasła?</a>
       </div>
       <div class="login_button flexHorizontalCenter">
-        <button class="classic_button" mat-stroked-button>Zaloguj</button>
+        <button class="classicButton" mat-stroked-button>Zaloguj</button>
       </div>
       <div class="flexHorizontalCenter margin_vertical">
         <span>lub</span>
       </div>
       <div class="flexHorizontalCenter margin_vertical">
-        <a class="common_link" routerLink="/auth/registery">Zarejestruj się</a>
+        <a class="commonLink" routerLink="/auth/registery">Zarejestruj się</a>
       </div>
     </form>
   </div>
