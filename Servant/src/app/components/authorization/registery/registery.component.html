@@ -7,7 +7,6 @@
       <div id="registeryInput" class="iconsMode">
         <input [(ngModel)]="registeryData.email" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required minlength="3">
       </div>
-      <div [innerText]="email.value"></div>
       <div id="passwordInput" class="iconsMode">
         <input [(ngModel)]="registeryData.password" [type]="passwordEye.inputType" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
         <app-password-eye #passwordEye></app-password-eye>
@@ -16,8 +15,15 @@
         <input [(ngModel)]="registeryData.passwordRepeat" [type]="passwordRepeatEye.inputType" name="passwordRepeat" #password="ngModel" appCheckPasswordRepeat [passwordValue]="password.value" class="common_input" placeholder="Powtórz hasło" required>
         <app-password-eye #passwordRepeatEye></app-password-eye>
       </div>
+      <dir>Dodać checkbox z regulaminiem</dir>
       <div class="marginTop flexHorizontalCenter">
         <button class="marginTop classicButton" mat-stroked-button>Zarejestruj</button>
+      </div>
+      <div class="flexHorizontalCenter marginVertical">
+        <span>lub</span>
+      </div>
+      <div class="flexHorizontalCenter marginVertical">
+        <a class="commonLink" routerLink="/auth/login">Zaloguj</a>
       </div>
     </form>
   </div>

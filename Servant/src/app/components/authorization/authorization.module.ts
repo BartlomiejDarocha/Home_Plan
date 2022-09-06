@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsValidationDirectiveModule } from 'src/app/directives/directives.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MainViewContainerModule } from '../global/main-view-container/main-view-container.module';
 import { PasswordEyeModule } from '../global/password-eye/password-eye.module';
@@ -24,7 +25,8 @@ import { RegisteryComponent } from './registery/registery.component';
     MainViewContainerModule,
     ReactiveFormsModule,
     AuthorizationRoutingModule,
-    PasswordEyeModule
+    PasswordEyeModule,
+    FormsValidationDirectiveModule
   ],
   exports: [
     LoginComponent,

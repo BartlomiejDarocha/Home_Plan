@@ -12,13 +12,11 @@ import { FormsValidationDirectiveModule } from '../directives/directives.module'
     CommonModule,
     MatDialogModule,
     MatButtonModule,
-    FormsValidationDirectiveModule // czemu to to w ogole jest??
   ],
   exports: [
     CommonModule,
     MatDialogModule,
     MatButtonModule,
-    FormsValidationDirectiveModule // czemu to to w ogole jest??
   ]
 })
 export class SharedModule { }
