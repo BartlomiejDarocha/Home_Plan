@@ -1,7 +1,7 @@
 import { Directive, ElementRef, Input, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { AlertsErrors, CustomAlertInteface } from 'src/app/models/validations-alerts/validations-alerts.enum';
+import { AlertsErrors, CustomAlertInteface } from 'src/app/models/validations-alerts/validations-alerts';
 
 interface IncorrectInputModel { name: string; errors: any };
 
@@ -9,7 +9,7 @@ interface IncorrectInputModel { name: string; errors: any };
   selector: '[formsValidation]'
 })
 export class FormsValidationDirective implements OnInit, OnDestroy {
-  @Input() customError: CustomAlertInteface = null;
+  @Input() customErrors: CustomAlertInteface[] = null;
   private subs: Subscription[] = [];
   private alertsErrors = AlertsErrors;
 
@@ -33,36 +33,27 @@ export class FormsValidationDirective implements OnInit, OnDestroy {
 
   private setErrors(): void {
     const incorrectInputs = this.checkIncorrectInputs();
-    console.log(incorrectInputs, 'incorrectInputs');
      
     const htmlElements: HTMLInputElement[] = this.element.nativeElement.elements;
     if (!incorrectInputs.length || !htmlElements.length) {
       return;
     }
     incorrectInputs.forEach((incorrectInput: IncorrectInputModel) => {      
-      if(!htmlElements[incorrectInput.name]) {
-        return;
-      }
       for (const key in incorrectInput.errors) {
-        console.log(key, 'key');
-        console.log(this.alertsErrors[key]);
         if (!this.alertsErrors[key]) {
-          console.log(htmlElements[incorrectInput.name], 'specialna obsługa błędu');
-          this.customRenderError(htmlElements[incorrectInput.name])
+          this.customRenderError(htmlElements[incorrectInput.name]);
         } else {
           this.renderError(htmlElements[incorrectInput.name], key, incorrectInput.errors[key]['requiredLength']);
         }
       }
-
-      if (!this.customError) {
-        return;
-      }
     });
   }
-  // te dwie funckaj do usprawnienia gdy będę robić dla tablic
+
   private customRenderError(element: HTMLInputElement) {
     const error = this.render.createElement('div');
-    const errorText = this.render.createText(this.customError.alertText);
+    const elementInputName = element.name;
+    const customError = this.customErrors.find((customError: CustomAlertInteface) => customError.inputName === elementInputName);
+    const errorText = this.render.createText(customError.alertText);
     this.render.addClass(error, 'form_error');
     this.render.appendChild(error, errorText);
     this.render.appendChild(element.parentElement, error);

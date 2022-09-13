@@ -1,6 +1,6 @@
 <div class="registeryWrapper flexHorizontalCenter">
   <div class="registeryForm flexFullCenter">
-    <form #resgisteryForm="ngForm" formsValidation [customError]="customRepeatPasswordError" (submit)="registery()">
+    <form #resgisteryForm="ngForm" formsValidation [customErrors]="customErrors" (submit)="registery()">
       <div class="flexHorizontalCenter">
         <i class="registeryIcon"></i>
       </div>
@@ -8,11 +8,11 @@
         <input [(ngModel)]="registeryData.email" name="email" #email="ngModel" class="common_input" placeholder="E-mail" type="email" [pattern]="emailPattern" required minlength="3">
       </div>
       <div id="passwordInput" class="iconsMode">
-        <input [(ngModel)]="registeryData.password" [type]="passwordEye.inputType" name="password" #password="ngModel" class="common_input" placeholder="Hasło" required>
+        <input [(ngModel)]="registeryData.password" [type]="passwordEye.inputType" name="password" #password="ngModel" appCheckPasswordRepeat [passwordValue]="passwordRepeat.value" class="common_input" placeholder="Hasło" required>
         <app-password-eye #passwordEye></app-password-eye>
       </div>
       <div id="passwordInputRepeat" class="iconsMode">
-        <input [(ngModel)]="registeryData.passwordRepeat" [type]="passwordRepeatEye.inputType" name="passwordRepeat" #password="ngModel" appCheckPasswordRepeat [passwordValue]="password.value" class="common_input" placeholder="Powtórz hasło" required>
+        <input [(ngModel)]="registeryData.passwordRepeat" [type]="passwordRepeatEye.inputType" name="passwordRepeat" #passwordRepeat="ngModel" appCheckPasswordRepeat [passwordValue]="password.value" class="common_input" placeholder="Powtórz hasło" required>
         <app-password-eye #passwordRepeatEye></app-password-eye>
       </div>
       <dir>Dodać checkbox z regulaminiem</dir>
