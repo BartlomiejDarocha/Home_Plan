@@ -16,11 +16,17 @@ export class RegisteryComponent implements OnInit {
     password: '',
     passwordRepeat: '',
   }
-  // To też wrzucić do ednuma albo jakiejś wspólnej klasy
+  // To też wrzucić do ednuma jako patter dla powtarzalnośći haseł
   public customRepeatPasswordError: CustomAlertInteface = {
     alertText: 'Podane hasła nie są identyczne',
     inputName: 'passwordRepeat',
   }
+
+  public ustomRepeatPasswordErrorArray: CustomAlertInteface[] = [
+    { alertText: 'Podane hasła nie są identyczne', inputName: 'passwordRepeat'},
+    { alertText: 'Podane hasła nie są identyczne', inputName: 'password'}
+  ]
+
 
   ngOnInit(): void {
   }
