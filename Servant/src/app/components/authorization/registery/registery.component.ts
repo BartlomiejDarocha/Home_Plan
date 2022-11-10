@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { EmailPattern } from 'src/app/models/patterns/patterns';
 import { CustomAlertInteface } from 'src/app/models/validations-alerts/validations-alerts';
-import { PasswordRepeaterErrors} from 'src/app/models/validations-alerts/validations-alerts'
+import { PasswordRepeaterErrorsModel} from 'src/app/models/validations-alerts/validations-alerts'
 
 @Component({
   selector: 'app-registery',
@@ -10,15 +10,14 @@ import { PasswordRepeaterErrors} from 'src/app/models/validations-alerts/validat
   styleUrls: ['./registery.component.scss']
 })
 export class RegisteryComponent implements OnInit {
-  // patterny do wspólnej klasy
+  // patterny do wspólnej klasy a raczej enum
   public emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   public registeryData = {
     email: '',
     password: '',
     passwordRepeat: '',
   }
-  // To też wrzucić do ednuma jako patter dla powtarzalnośći hase
-  public customErrors: CustomAlertInteface[] = new PasswordRepeaterErrors().getErrors;
+  public customErrors: CustomAlertInteface[] = new PasswordRepeaterErrorsModel().getErrors;
 
   ngOnInit(): void {
   }
